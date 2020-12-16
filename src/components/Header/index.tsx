@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className={styles.Header}>
       <Sidebar />
-      <h1 className={styles.Header__text}>The App is working! Don't worry</h1>;
+      {/* <h1 className={styles.Header__text}>The App is working! Don't worry</h1>; */}
     </div>
   );
 };
