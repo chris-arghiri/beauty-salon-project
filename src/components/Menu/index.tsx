@@ -1,25 +1,28 @@
-import React, { FunctionComponent, MouseEvent, useState } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import styles from './Menu.module.scss';
 
 interface IMenuProps {}
 
-const Menu: FunctionComponent<IMenuProps> = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+const Menu: FunctionComponent<IMenuProps> = (props) => {
+  const [isToggled, setIsToggled] = useState<boolean>(false);
 
-  const menuOpenHandler = (event: MouseEvent<HTMLElement>) => {
-    setIsOpen(true);
+  const menuOpenHandler = () => {
+    setIsToggled(true);
   };
 
-  const menuClosedHandler = (event: MouseEvent<HTMLElement>) => {
-    setIsOpen(!isOpen);
+  const menuClosedHandler = () => {
+    setIsToggled(!isToggled);
   };
+
   return (
     <div className={styles.Menu}>
       <a
         href='#'
-        className={styles.Menu__button}
-        onClick={isOpen ? menuOpenHandler : menuClosedHandler}>
-        {' '}
+        className={
+          isToggled ? styles.Menu__buttonClose : styles.Menu__buttonOpen
+        }
+        onClick={isToggled ? menuClosedHandler : menuOpenHandler}>
+        {''}
       </a>
       <p className={styles.Menu__text}>ABSC.</p>
     </div>
