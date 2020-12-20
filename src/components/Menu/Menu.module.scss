@@ -2,6 +2,7 @@
 @import '../../sass//abstracts/mixins';
 
 .Menu {
+  z-index: 400;
   margin-top: 2.5rem;
   margin-left: 2.5rem;
   padding: 0;
@@ -13,7 +14,7 @@
   height: 1.3rem;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &__buttonOpen {
     @include burger-button-line($color-white-default);
@@ -31,16 +32,18 @@
     @include burger-button-line(transparent);
 
     &::before {
+      background: $color-black-default;
       transform: translateX(-0.6rem) rotate(45deg);
     }
 
     &::after {
+      background: $color-black-default;
       transform: translateX(-0.6rem) rotate(-45deg);
     }
   }
 
   &__text {
-    display: block;
+    flex: 1;
     margin-top: 0.5rem;
     margin-left: 12rem;
     color: $color-white-default;

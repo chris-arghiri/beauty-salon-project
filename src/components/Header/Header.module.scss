@@ -2,6 +2,7 @@
 
 .Header {
   display: flex;
+  // flex-flow: column;
   align-items: center;
   height: 100vh;
   background-image: linear-gradient(
@@ -14,9 +15,18 @@
   text-align: center;
 
   &__text {
-    position: relative;
+    // align-self: start;
+    // margin-left: 10rem;
+    // margin-bottom: 10rem;
+    // margin: 0 0 10rem 10rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    align-self: flex-end;
     color: $color-white-default;
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     font-family: 'JetBrains Mono';
     font-weight: 100;
   }

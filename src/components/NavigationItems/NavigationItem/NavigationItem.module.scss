@@ -7,14 +7,22 @@
   align-items: center;
   height: 6rem;
 
-  &__link {
+  &__link:link,
+  &__link:visited {
     display: block;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 3.15rem;
+    height: 3.15rem;
     padding: 0;
     margin: 1rem 0;
     border-radius: 50%;
     text-decoration: none;
+    transition: all 0.5s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    // border: 0.1rem solid $color-black-default;
+    transform: scale(1.1);
   }
 
   &__paragraph {
