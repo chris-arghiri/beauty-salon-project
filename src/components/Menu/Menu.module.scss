@@ -32,12 +32,12 @@
     @include burger-button-line(transparent);
 
     &::before {
-      background: $color-black-default;
+      background: $color-white-default;
       transform: translateX(-0.6rem) rotate(45deg);
     }
 
     &::after {
-      background: $color-black-default;
+      background: $color-white-default;
       transform: translateX(-0.6rem) rotate(-45deg);
     }
   }

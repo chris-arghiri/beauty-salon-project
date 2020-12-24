@@ -1,15 +1,47 @@
-import { ReactComponent } from '*.svg';
-import React, { CSSProperties, FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import styles from './Modal.module.scss';
 
 interface IModalProps {
-  children: React.ReactNode;
   isOpened: boolean;
-  //   anchorStyle: { [key: string]: string };
+  buttonClassName?: string;
+  // closeMenu: (event: React.MouseEvent<HTMLElement>) => {
+
+  // }
 }
 
-const Modal: FunctionComponent<IModalProps> = ({ children, isOpened }) => {
-  return <div className={isOpened ? styles.Modal : undefined}>{children}</div>;
+const Modal: FunctionComponent<IModalProps> = ({
+  isOpened,
+  buttonClassName
+}) => {
+  return (
+    <div className={isOpened ? styles.Modal : undefined} hidden={!isOpened}>
+      <a
+        href='/'
+        className={buttonClassName}
+        /*onClick={closeMenu} */
+      ></a>
+      <ul style={{ color: 'white' }}>
+        <li style={{ color: 'black' }}>
+          <a href='/'>Content</a>
+        </li>
+        <li style={{ color: 'black' }}>
+          <a href='/'>Content</a>
+        </li>
+        <li style={{ color: 'black' }}>
+          <a href='/'>Content</a>
+        </li>
+        <li style={{ color: 'black' }}>
+          <a href='/'>Content</a>
+        </li>
+        <li style={{ color: 'black' }}>
+          <a href='/'>Content</a>
+        </li>
+        <li style={{ color: 'black' }}>
+          <a href='/'>Content</a>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default Modal;

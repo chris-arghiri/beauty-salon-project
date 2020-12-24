@@ -1,0 +1,24 @@
+@import '../../../sass/main.scss';
+
+.About {
+  flex: 1;
+
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+
+  color: $color-white-default;
+  font-size: 1.25rem;
+  font-family: 'JetBrains Mono';
+  font-weight: 100;
+
+  & p,
+  a {
+    display: block;
+    margin-top: 4rem;
+    margin-left: 20rem;
+    flex: 1;
+    align-self: stretch;
+    font-size: 0.7rem;
+  }
+}
