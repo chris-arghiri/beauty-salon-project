@@ -17,9 +17,11 @@ const NavigationItem: FunctionComponent<IProps> = ({
         href={link}
         className={styles.NavigationItem__link}
         style={{ border: `0.1rem solid ${color}` }}>
-        {children}
+        &nbsp;
       </a>
-      <p className={styles.NavigationItem__paragraph}>TEXT HERE</p>
+      <p className={styles.NavigationItem__pg} style={{ color: `${color}` }}>
+        {children}
+      </p>
     </div>
   );
 };

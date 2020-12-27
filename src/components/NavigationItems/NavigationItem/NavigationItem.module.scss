@@ -1,10 +1,13 @@
 @import '../../../sass/abstracts/variables';
-
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
 .NavigationItem {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  // top: 10vh;
+  // width: 10vh;
+  // height: 20vh;
   height: 6rem;
 
   &__link:link,
@@ -13,10 +16,10 @@
     width: 3.15rem;
     height: 3.15rem;
     padding: 0;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     border-radius: 50%;
     text-decoration: none;
-    transition: all 0.5s;
+    transition: all 0.6s;
   }
 
   &__link:hover,
@@ -24,7 +27,9 @@
     transform: scale(1.1);
   }
 
-  &__paragraph {
-    color: $color-white-default;
+  &__pg {
+    font-family: 'Redressed', cursive;
+    font-weight: bold;
+    font-size: 0.7rem;
   }
 }

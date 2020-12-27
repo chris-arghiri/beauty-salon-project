@@ -1,0 +1,16 @@
+.SNS {
+  flex: 1;
+  align-self: flex-end;
+
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+
+  list-style: none;
+
+  & a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+  }
+}

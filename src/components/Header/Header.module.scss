@@ -2,31 +2,15 @@
 
 .Header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   background-image: linear-gradient(
       to right top,
-      rgba($color-grey-dark-2, 0.9),
-      rgba($color-grey-dark-2, 0.9)
+      rgba($color-grey-dark-2, 0.85),
+      rgba($color-grey-dark-2, 0.85)
     ),
     url(../../assets/images/header_bg.jpg);
   background-size: cover;
   text-align: center;
-
-  // &:last-child {
-  //   align-self: start;
-  //   background-color: #000;
-  // }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    height: 5rem;
-    & li a {
-      text-decoration: none;
-      background-color: #fff;
-      margin-left: 0.5rem;
-    }
-  }
 }

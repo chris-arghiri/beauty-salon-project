@@ -1,0 +1,12 @@
+.AutoWrittingText {
+  &__cursor {
+    border-left: 0.15rem solid #ca8fc7;
+    animation: blink 0.8s steps(1) infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+}
