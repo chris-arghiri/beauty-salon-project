@@ -1,18 +1,45 @@
 @import '../../sass/main.scss';
+
 .Modal {
   position: fixed;
-  z-index: 500;
+  z-index: 999;
   background-color: $color-white-default;
-  height: 100%;
-  width: 100%;
+  height: 100vh !important;
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
   top: 0;
+  bottom: 0;
   left: 0;
-  display: flex;
-  flex-flow: column;
+  right: 0;
+
   background-color: #000;
+
+  // visibility: hidden;
+  // opacity: 0;
+  // pointer-events: none;
+
   transition: all 1s;
+
+  &__opened {
+    all: inherit;
+    background-color: #ccc;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  // display: flex;
+  // flex-flow: column;
+
+  // background-color: #000;
 
   & a {
     text-decoration: none;
+  }
+
+  & img {
+    width: 5rem;
+    height: 5rem;
   }
 }

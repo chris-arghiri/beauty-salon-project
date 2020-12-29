@@ -1,45 +1,46 @@
 import React, { FunctionComponent } from 'react';
 import styles from './Modal.module.scss';
+import logo from '../../assets/svgs/logo.svg';
 
-interface IModalProps {
+export interface IModalProps {
   isOpened: boolean;
   buttonClassName?: string;
-  // closeMenu: (event: React.MouseEvent<HTMLElement>) => {
-
-  // }
+  onCloseMenu(): void;
 }
 
 const Modal: FunctionComponent<IModalProps> = ({
   isOpened,
-  buttonClassName
+  buttonClassName,
+  onCloseMenu
 }) => {
   return (
     <div className={isOpened ? styles.Modal : undefined} hidden={!isOpened}>
-      <a
-        href='/'
-        className={buttonClassName}
-        /*onClick={closeMenu} */
-      ></a>
-      <ul style={{ color: 'white' }}>
-        <li style={{ color: 'black' }}>
-          <a href='/'>Content</a>
-        </li>
-        <li style={{ color: 'black' }}>
-          <a href='/'>Content</a>
-        </li>
-        <li style={{ color: 'black' }}>
-          <a href='/'>Content</a>
-        </li>
-        <li style={{ color: 'black' }}>
-          <a href='/'>Content</a>
-        </li>
-        <li style={{ color: 'black' }}>
-          <a href='/'>Content</a>
-        </li>
-        <li style={{ color: 'black' }}>
-          <a href='/'>Content</a>
-        </li>
-      </ul>
+      <a href='/' className={buttonClassName} onClick={onCloseMenu}>
+        {' '}
+      </a>
+      <>
+        <ul>
+          <li>
+            <a href='/'>Something here</a>
+          </li>
+          <li>
+            <a href='/'>Something here</a>
+          </li>
+          <li>
+            <a href='/'>Something here</a>
+          </li>
+          <li>
+            <a href='/'>Something here</a>
+          </li>
+          <li>
+            <a href='/'>Something here</a>
+          </li>
+          <li>
+            <a href='/'>Something here</a>
+          </li>
+        </ul>
+      </>
+      <img src={logo} alt='123' />
     </div>
   );
 };

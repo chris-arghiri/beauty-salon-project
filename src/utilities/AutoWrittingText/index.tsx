@@ -41,7 +41,7 @@ const AutoWrittingText: FunctionComponent<IMessage> = ({ title, message }) => {
 
   return (
     <h2>
-      {title} {text}
+      {title} &ndash; {text}
       <span className={styles.AutoWrittingText__cursor} />
     </h2>
   );

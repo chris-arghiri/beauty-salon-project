@@ -5,9 +5,6 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  // top: 10vh;
-  // width: 10vh;
-  // height: 20vh;
   height: 6rem;
 
   &__link:link,
@@ -29,7 +26,6 @@
 
   &__pg {
     font-family: 'Redressed', cursive;
-    font-weight: bold;
     font-size: 0.7rem;
   }
 }

@@ -5,34 +5,22 @@ const SNS = () => {
   return (
     <ul className={styles.SNS}>
       <li>
-        <a href='#'>
-          <b>About</b>
-        </a>
+        <a href='/a'>About</a>
       </li>
       <li>
-        <a href='#'>
-          <b>About</b>
-        </a>
+        <a href='/a'>About</a>
       </li>
       <li>
-        <a href='#'>
-          <b>About</b>
-        </a>
+        <a href='/a'>About</a>
       </li>
       <li>
-        <a href='#'>
-          <b>About</b>
-        </a>
+        <a href='/a'>About</a>
       </li>
       <li>
-        <a href='#'>
-          <b>About</b>
-        </a>
+        <a href='/a'>About</a>
       </li>
       <li>
-        <a href='#'>
-          <b>About</b>
-        </a>
+        <a href='/a'>About</a>
       </li>
     </ul>
   );

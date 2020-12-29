@@ -1,11 +1,13 @@
+@import '../../../../sass/main.scss';
+
 .Info {
+  flex: 1; //grow | shrink | basis
+  margin-top: 3.5vh;
+  padding-left: 3.5rem;
   display: flex;
   flex-flow: column;
-  margin: auto 0 2rem 2rem;
-
-  p {
-    color: #fff;
-    font-weight: 500;
-    font-size: 0.5rem;
+  text-align: left;
+  & p {
+    @include small-bold-grey-text;
   }
 }

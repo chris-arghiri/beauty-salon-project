@@ -1,16 +1,18 @@
+@import '../../../../sass/main.scss';
+
 .SNS {
   flex: 1;
   align-self: flex-end;
 
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 40%;
 
   list-style: none;
 
   & a {
-    text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
+    color: $color-primary-grey;
+    font-weight: bold;
   }
 }
