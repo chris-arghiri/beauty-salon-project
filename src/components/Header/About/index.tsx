@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './About.module.scss';
-import logo from '../../../assets/svgs/logo.svg';
+import logo from '../../../assets/images/tiny_logo.png';
 
 import AutoWrittingText from '../../../utilities/AutoWrittingText';
 import SNS from './SNS';
@@ -9,7 +9,7 @@ const About = () => {
   return (
     <>
       <div className={styles.About__logo}>
-        <img src={logo} alt={'Logo'} />
+        <img src={logo} alt='Logo' />
       </div>
       <div className={styles.About}>
         <AutoWrittingText

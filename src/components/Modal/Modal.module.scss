@@ -1,13 +1,13 @@
 @import '../../sass/main.scss';
 
 .Modal {
-  position: fixed;
+  position: absolute;
   z-index: 999;
   background-color: $color-white-default;
   height: 100vh !important;
-  width: 100vw !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  // width: 100vw !important;
+  margin: 0 auto !important;
+  padding: 0 auto !important;
   top: 0;
   bottom: 0;
   left: 0;
@@ -19,20 +19,27 @@
   // opacity: 0;
   // pointer-events: none;
 
-  transition: all 1s;
+  animation: open-modal 1s ease-in-out;
+  transition: all 0.7s;
 
-  &__opened {
-    all: inherit;
-    background-color: #ccc;
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
+  // transform: translate(50%, 50%);
+
+  @keyframes open-modal {
+    0% {
+      transform: translate(-100%);
+    }
+    100% {
+      transform: translate(0%);
+    }
   }
 
-  // display: flex;
-  // flex-flow: column;
-
-  // background-color: #000;
+  // &__opened {
+  //   all: inherit;
+  //   background-color: #ccc;
+  //   visibility: visible;
+  //   opacity: 1;
+  //   pointer-events: auto;
+  // }
 
   & a {
     text-decoration: none;

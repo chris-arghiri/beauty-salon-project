@@ -3,6 +3,7 @@
   margin-left: 3rem;
   padding: 0 0.2rem;
   position: absolute;
+  z-index: 1;
   width: 1.3rem;
   height: 0.12rem;
   background: $background-color;
@@ -22,8 +23,8 @@
   }
 }
 
-@mixin small-bold-grey-text() {
-  color: $color-primary-grey;
+@mixin small-bold-color-text($color) {
+  color: $color;
   font-weight: bold;
   font-size: 0.5rem;
 }

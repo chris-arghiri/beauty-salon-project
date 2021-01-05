@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styles from './Modal.module.scss';
-import logo from '../../assets/svgs/logo.svg';
+import logo from '../../assets/svgs/makeup.svg';
 
 export interface IModalProps {
   isOpened: boolean;

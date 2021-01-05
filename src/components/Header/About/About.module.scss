@@ -43,20 +43,22 @@
 
   & p,
   a {
-    @include small-bold-grey-text;
+    @include small-bold-color-text($color-primary-grey);
   }
 
   &__logo {
     position: absolute;
-    top: 7vh;
-    left: 88vw;
-
-    width: 4.5rem;
-    height: 4.5rem;
+    z-index: 1;
+    top: 6.25vh;
+    left: 92.25vw;
+    width: 3.75vw;
+    height: 3.75vh;
 
     & img {
       max-width: 100%;
       height: auto;
+      filter: invert(100%) sepia(100%) brightness(100%) contrast(30%)
+        hue-rotate(87deg);
     }
   }
 }

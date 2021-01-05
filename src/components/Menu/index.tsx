@@ -16,15 +16,17 @@ const Menu: FunctionComponent<IMenuProps> = () => {
   };
 
   return (
-    <div className={styles.Menu}>
-      <div className={styles.Menu__buttonOpen} onClick={showMenu} />
-      <h3 className={styles.Menu__text}>ABSC.</h3>
+    <>
+      <div className={styles.Menu}>
+        <div className={styles.Menu__buttonOpen} onClick={showMenu} />
+        <h3 className={styles.Menu__text}>ABSC.</h3>
+      </div>
       <Modal
         isOpened={isToggled}
         buttonClassName={styles.Menu__buttonClose}
         onCloseMenu={closeMenu}
       />
-    </div>
+    </>
   );
 };
 

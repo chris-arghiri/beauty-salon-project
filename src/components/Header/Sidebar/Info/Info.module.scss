@@ -2,12 +2,15 @@
 
 .Info {
   flex: 1; //grow | shrink | basis
-  margin-top: 3.5vh;
-  padding-left: 3.5rem;
+  margin: 0 auto;
+  padding: 4vh;
+  padding-left: 10vh;
   display: flex;
   flex-flow: column;
   text-align: left;
+  white-space: nowrap;
+
   & p {
-    @include small-bold-grey-text;
+    @include small-bold-color-text($color-grey-light-1);
   }
 }
