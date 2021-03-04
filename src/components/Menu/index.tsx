@@ -47,7 +47,7 @@ const Menu: FunctionComponent<IMenuProps> = () => {
   };
 
   const closeMenu = () => {
-    setIsToggled(!isToggled);
+    setIsToggled(false);
   };
 
   return (
