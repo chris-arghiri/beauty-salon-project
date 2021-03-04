@@ -1,11 +1,12 @@
 .NavigationItems {
   flex: 1;
-  padding: 3rem;
+  top: 5rem;
+  padding-left: 3.5rem;
   list-style: none;
 
   display: grid;
   grid-template-rows: repeat(3, 5rem);
   grid-template-columns: repeat(2, minmax(5rem, min-content));
-  column-gap: 1vw;
+  column-gap: 0.8vw;
   row-gap: 7.5vh;
 }

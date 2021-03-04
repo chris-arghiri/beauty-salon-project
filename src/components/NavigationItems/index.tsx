@@ -6,22 +6,19 @@ const NavigationItems = () => (
   <>
     <ul className={styles.NavigationItems}>
       <NavigationItem link='/' color='#5bd1d7'>
-        About
+        Gallery
       </NavigationItem>
       <NavigationItem link='/' color='pink'>
-        About
+        Credentials
       </NavigationItem>
       <NavigationItem link='/' color='#f0bf4c'>
-        About
+        Videos
       </NavigationItem>
-      <NavigationItem link='/' color='#fff'>
-        About
+      <NavigationItem link='/' color='#bbcefb'>
+        Shop
       </NavigationItem>
       <NavigationItem link='/' color='#f59794'>
-        About
-      </NavigationItem>
-      <NavigationItem link='/' color='#bccefb'>
-        About
+        Info
       </NavigationItem>
     </ul>
   </>

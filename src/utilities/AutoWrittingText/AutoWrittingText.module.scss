@@ -1,7 +1,7 @@
 .AutoWrittingText {
   &__cursor {
     border-left: 0.15rem solid #ca8fc7;
-    animation: blink 0.8s steps(1) infinite;
+    animation: blink 1s steps(1) infinite;
   }
 
   @keyframes blink {

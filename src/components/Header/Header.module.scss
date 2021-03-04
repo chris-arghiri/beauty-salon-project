@@ -5,13 +5,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
-  background-image: linear-gradient(
-      to right top,
-      rgba($color-grey-dark-2, 0.85),
-      rgba($color-grey-dark-2, 0.85)
-    ),
-    url(../../assets/images/tiny_header_bg.jpg);
+  min-height: 100vh;
+  background: #262626;
   background-size: cover;
   text-align: center;
+
+  &__logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 10vw;
+  }
 }

@@ -1,31 +1,53 @@
 @import '../../../sass/abstracts/variables';
 @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
 .NavigationItem {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   height: 6rem;
+  position: relative;
 
-  &__link:link,
-  &__link:visited {
+  &__link:is(:link, :visited) {
     display: block;
-    width: 3.15rem;
-    height: 3.15rem;
-    padding: 0;
-    margin: 0.5rem 0;
+    width: 3.8rem;
+    height: 3.8rem;
+    padding: 1rem;
+    margin: 0.4rem 0;
+    box-sizing: border-box;
+    border: solid 0.15rem transparent;
     border-radius: 50%;
     text-decoration: none;
     transition: all 0.6s;
   }
 
-  &__link:hover,
-  &__link:active {
+  &__link:is(:hover, :active) {
     transform: scale(1.1);
   }
 
+  // &__link::before {
+  //   content: '';
+  //   position: absolute;
+  //   z-index: 1;
+  //   background: linear-gradient(
+  //     130deg,
+  //     #ff7a18,
+  //     #af002d 41.07%,
+  //     #319197 76.05%
+  //   );
+  //   width: 0.5rem;
+  //   height: 0.5rem;
+  //   padding: -1rem;
+  //   border-radius: inherit;
+  // }
+
+  &__link:is(::after, ::before) {
+    box-sizing: border-box;
+  }
+
   &__pg {
-    font-family: 'Redressed', cursive;
-    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', cursive;
+    font-size: 0.6rem;
   }
 }

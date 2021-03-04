@@ -2,19 +2,18 @@
 @import '../../sass//abstracts/mixins';
 
 .Menu {
-  margin-top: 2.5rem;
-  margin-left: 2.5rem;
+  top: 1rem;
+  right: 10rem;
+  position: absolute;
   padding: 0;
-  // position: relative;
-  // z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 1.3rem;
   height: 1.3rem;
-  cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   &__buttonOpen {
     @include burger-button-line($color-white-default);
@@ -40,15 +39,5 @@
       background: $color-white-default;
       transform: translateX(-0.6rem) rotate(-45deg);
     }
-  }
-
-  &__text {
-    flex: 1;
-    margin-top: 0.5rem;
-    margin-left: 12rem;
-    color: $color-white-default;
-    font-size: 1.2rem;
-    font-family: 'JetBrains Mono';
-    font-weight: 300;
   }
 }

@@ -22,7 +22,7 @@ const AutoWrittingText: FunctionComponent<IMessage> = ({ title, message }) => {
         : fullText.substring(0, text.length + 1)
     );
 
-    setSpeed(isDeleting ? 90 : 110);
+    setSpeed(isDeleting ? 120 : 90);
 
     if (!isDeleting && text === fullText) {
       setTimeout(() => setIsDeleting(true), 500);

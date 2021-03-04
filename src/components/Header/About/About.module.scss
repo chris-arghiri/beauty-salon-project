@@ -8,16 +8,14 @@
 
   position: absolute;
   z-index: 1;
-  height: 30vh;
-  width: 65vw;
-  top: 75%;
-  left: 60%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 
   color: $color-white-default;
   font-size: 1.1rem;
   font-family: 'JetBrains Mono';
-  font-weight: 100;
+  font-weight: 200;
   white-space: nowrap;
 
   & h4 {
@@ -49,16 +47,15 @@
   &__logo {
     position: absolute;
     z-index: 1;
-    top: 6.25vh;
-    left: 92.25vw;
-    width: 3.75vw;
-    height: 3.75vh;
+    top: 5vh;
+    left: 90vw;
+    width: 8vw;
+    height: 8vh;
 
     & img {
       max-width: 100%;
       height: auto;
-      filter: invert(100%) sepia(100%) brightness(100%) contrast(30%)
-        hue-rotate(87deg);
+      filter: invert(100%) brightness(100%) contrast(30%) hue-rotate(87deg);
     }
   }
 }

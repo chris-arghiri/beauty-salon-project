@@ -16,10 +16,10 @@ const NavigationItem: FunctionComponent<IProps> = ({
       <a
         href={link}
         className={styles.NavigationItem__link}
-        style={{ border: `0.1rem solid ${color}` }}>
+        style={{ border: `0.13rem solid ${color}` }}>
         &nbsp;
       </a>
-      <p className={styles.NavigationItem__pg} style={{ color: `${color}` }}>
+      <p className={styles.NavigationItem__pg} style={{ color: `#fff` }}>
         {children}
       </p>
     </div>
