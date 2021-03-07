@@ -1,0 +1,12 @@
+.NavigationBar {
+  top: 0;
+  left: 0;
+  height: 13.5vh;
+  width: 100%;
+  position: fixed;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}

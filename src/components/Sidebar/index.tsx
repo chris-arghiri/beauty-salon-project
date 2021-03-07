@@ -6,30 +6,30 @@ export interface IModalProps {
 }
 
 const Sidebar: FunctionComponent<IModalProps> = ({ isOpened }) => {
-  const handleClickOutside = (event: MouseEvent) => {};
-
   return (
     <div
-      className={isOpened ? styles.Sidebar : undefined /*styles.Sidebar*/}
+      className={
+        isOpened ? styles.Sidebar : undefined /*styles.Sidebar__close*/
+      }
       hidden={!isOpened}>
       <ul>
         <li>
-          <a href='/'>Something here</a>
+          <a href='/'>Gallery</a>
         </li>
         <li>
-          <a href='/'>Something here</a>
+          <a href='/'>Credentials</a>
         </li>
         <li>
-          <a href='/'>Something here</a>
+          <a href='/'>Videos</a>
         </li>
         <li>
-          <a href='/'>Something here</a>
+          <a href='/'>Shop</a>
         </li>
         <li>
-          <a href='/'>Something here</a>
+          <a href='/'>Info</a>
         </li>
         <li>
-          <a href='/'>Something here</a>
+          <a href='/'>COVID-19 info</a>
         </li>
       </ul>
     </div>

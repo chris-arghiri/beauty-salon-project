@@ -17,7 +17,7 @@
   }
 }
 
-@keyframes showTopText {
+@keyframes show-top-text {
   0% {
     opacity: 0;
     transform: translate3d(0, 100%, 0);
@@ -30,7 +30,7 @@
     transform: translate3d(0, 0, 0);
   }
 }
-@keyframes showBottomText {
+@keyframes show-bottom-text {
   0% {
     opacity: 0;
     transform: translate3d(0, -100%, 0);

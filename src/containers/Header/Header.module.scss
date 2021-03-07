@@ -10,10 +10,17 @@
   background-size: cover;
   text-align: center;
 
-  &__logo {
+  &__cover {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 10vw;
+    top: 30vh;
+    left: 50vw;
+    height: 35vh;
+    width: 35vw;
+    transform: rotate(133.25deg);
+
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }

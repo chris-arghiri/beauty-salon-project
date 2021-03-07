@@ -1,11 +1,11 @@
-@import '../../sass/abstracts/variables';
-@import '../../sass//abstracts/mixins';
+@import '../../../sass/abstracts/variables';
+@import '../../../sass//abstracts/mixins';
 
 .Menu {
-  top: 1rem;
-  right: 10rem;
-  position: absolute;
-  padding: 0;
+  flex: 1;
+  align-self: center;
+  padding-left: 40vw;
+
   display: flex;
   justify-content: center;
   align-items: center;

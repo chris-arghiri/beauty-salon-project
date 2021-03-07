@@ -1,0 +1,58 @@
+@import '../../sass/main.scss';
+
+.About {
+  flex: 1;
+
+  display: flex;
+  flex-flow: column;
+
+  top: 30vh;
+  left: 30vw;
+  height: 70vh;
+
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+
+  color: $color-white-default;
+  font-size: 1.1rem;
+  font-family: 'JetBrains Mono';
+  font-weight: 200;
+  white-space: nowrap;
+
+  & a {
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  &__topText {
+    top: 0;
+    color: #fff;
+    animation: show-top-text 1.25s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    bottom: 0;
+    transform: translate(0, 100%);
+
+    & span {
+      display: block;
+      text-align: left;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+
+  &__bottomText {
+    display: block;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #ff4b1f, #1fddff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+    animation: show-bottom-text 0.75s;
+    animation-delay: 1.7s;
+    animation-fill-mode: both;
+    transform: translate(0, -100%);
+  }
+}

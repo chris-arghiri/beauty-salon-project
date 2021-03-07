@@ -1,16 +1,18 @@
 @import '../../sass/main.scss';
 
+// add liniar-gradient so the menu icon is ok visible
+
 .Sidebar {
   position: fixed;
   z-index: 99;
   background-color: $color-white-default;
   height: 100vh;
-  width: 20vw;
+  width: 17.5vw;
   margin: 0 auto;
   padding: 0 auto;
-  top: 0;
+  bottom: 0;
   right: 0;
-  background-color: $color-black-default;
+  background: linear-gradient(-120deg, #000, #434343);
   animation: open-menu 1s ease-in-out;
   transition: all 0.6s;
 
@@ -19,76 +21,29 @@
     transition: all 3s;
   }
 
-  &__animatedTitle {
-    top: 15vh;
-    left: 35vw;
-    height: 50%;
-    width: 50%;
-    overflow: hidden;
-    position: absolute;
-    font-size: 12vmin;
-    padding: 2vmin 0;
-    cursor: pointer;
-  }
-
-  &__topText {
-    top: 0;
-    color: #fff;
-    animation: showTopText 1.25s;
-    animation-delay: 1.5s;
-    animation-fill-mode: both;
-    bottom: 0;
-    transform: translate(0, 100%);
-
-    & span {
-      display: block;
-    }
-  }
-
-  &__bottomText {
-    display: block;
-    background: linear-gradient(to right, #ff4b1f, #1fddff);
-    // background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    bottom: 0;
-    animation: showBottomText 1s;
-    animation-delay: 3s;
-    animation-fill-mode: both;
-    top: 0;
-    transform: translate(0, -100%);
-  }
-
   & a {
     color: #fff;
+    background-clip: padding-box;
     text-decoration: none;
-    top: 6.5vh;
-    left: 1vw;
   }
 
   & ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: flex-end;
 
     height: 75vh;
     width: 20vw;
 
-    margin-top: 17.5vh;
-    margin-left: 6.5vw;
+    padding-top: 33vh;
+    padding-right: 7vw;
+    list-style: none;
   }
 
   & li {
-    text-align: start;
     flex: 1;
-    position: relative;
-    padding: 5vmin;
-    margin: 0.4vh;
-  }
-
-  & img {
-    width: 5rem;
-    height: 5rem;
+    text-align: start;
+    padding: 4vmin;
   }
 }

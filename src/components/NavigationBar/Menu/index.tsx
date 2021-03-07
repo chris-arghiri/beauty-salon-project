@@ -6,7 +6,7 @@ import React, {
   useCallback
 } from 'react';
 import styles from './Menu.module.scss';
-import Sidebar from '../Sidebar';
+import Sidebar from '../../Sidebar';
 
 interface IMenuProps {}
 
