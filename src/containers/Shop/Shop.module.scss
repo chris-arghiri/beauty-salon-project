@@ -1,0 +1,5 @@
+@import '../../sass/main.scss';
+
+.Shop {
+  @include set-section-cover(blue);
+}

@@ -9,7 +9,7 @@
   height: 6rem;
   position: relative;
 
-  &__link:is(:link, :visited) {
+  &__link {
     display: block;
     width: 3.7rem;
     height: 3.7rem;
@@ -20,11 +20,29 @@
     border-radius: 50%;
     text-decoration: none;
     transition: all 0.6s;
+    cursor: pointer;
   }
 
   &__link:is(:hover, :active) {
-    transform: scale(1.1);
+    transform: scale(1.11);
   }
+
+  // &__link:is(:link, :visited) {
+  //   display: block;
+  //   width: 3.7rem;
+  //   height: 3.7rem;
+  //   padding: 1rem;
+  //   margin: 0.4rem 0;
+  //   box-sizing: border-box;
+  //   border: solid 0.15rem transparent;
+  //   border-radius: 50%;
+  //   text-decoration: none;
+  //   transition: all 0.6s;
+  // }
+
+  // &__link:is(:hover, :active) {
+  //   transform: scale(1.1);
+  // }
 
   // &__link::before {
   //   content: '';

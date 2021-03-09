@@ -1,0 +1,5 @@
+@import '../../sass/main.scss';
+
+.Videos {
+  @include set-section-cover(green);
+}

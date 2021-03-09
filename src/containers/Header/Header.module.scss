@@ -1,13 +1,11 @@
 @import '../../sass/main.scss';
 
 .Header {
-  position: relative;
+  @include set-section-cover(#262626);
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100vh;
-  background: #262626;
-  background-size: cover;
   text-align: center;
 
   &__cover {

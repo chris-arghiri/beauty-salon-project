@@ -5,19 +5,19 @@ import styles from './NavigationItems.module.scss';
 const NavigationItems = () => (
   <>
     <ul className={styles.NavigationItems}>
-      <NavigationItem link='/' color='#5bd1d7'>
+      <NavigationItem id='gallery' color='#5bd1d7'>
         Gallery
       </NavigationItem>
-      <NavigationItem link='/' color='pink'>
+      <NavigationItem id='credentials' color='pink'>
         Credentials
       </NavigationItem>
-      <NavigationItem link='/' color='#f0bf4c'>
+      <NavigationItem id='videos' color='#f0bf4c'>
         Videos
       </NavigationItem>
-      <NavigationItem link='/' color='#bbcefb'>
+      <NavigationItem id='shop' color='#bbcefb'>
         Shop
       </NavigationItem>
-      <NavigationItem link='/' color='#f59794'>
+      <NavigationItem id='info' color='#f59794'>
         Info
       </NavigationItem>
     </ul>

@@ -22,3 +22,10 @@
     transition: all 0.5s ease-in-out;
   }
 }
+
+@mixin set-section-cover($background-color) {
+  position: relative;
+  min-height: 100vh;
+  background: $background-color;
+  background-size: cover;
+}
