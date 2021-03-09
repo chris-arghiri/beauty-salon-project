@@ -1,9 +1,4 @@
-import React, {
-  FunctionComponent,
-  useEffect,
-  useCallback,
-  useRef
-} from 'react';
+import React, { FunctionComponent } from 'react';
 import styles from './NavigationItem.module.scss';
 
 interface IProps {
@@ -14,9 +9,6 @@ interface IProps {
 const NavigationItem: FunctionComponent<IProps> = ({ children, id, color }) => {
   const smoothScrollTo = () => {
     const element = document.getElementById(id);
-    element
-      ? element.scrollIntoView({ block: 'start', behavior: 'smooth' })
-      : console.log("element doesn't exist", `id:${id}`);
     element?.scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
 
@@ -27,9 +19,12 @@ const NavigationItem: FunctionComponent<IProps> = ({ children, id, color }) => {
         className={styles.NavigationItem__link}
         style={{ border: `0.13rem solid ${color}` }}
       />
-      <p className={styles.NavigationItem__pg} style={{ color: `#fff` }}>
+      <div
+        onClick={smoothScrollTo}
+        className={styles.NavigationItem__pg}
+        style={{ color: `#fff` }}>
         {children}
-      </p>
+      </div>
     </div>
   );
 };

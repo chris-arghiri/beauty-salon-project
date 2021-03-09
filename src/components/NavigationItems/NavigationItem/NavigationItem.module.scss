@@ -27,6 +27,14 @@
     transform: scale(1.11);
   }
 
+  &__pg {
+    display: block;
+    padding-top: 0.15rem;
+    font-family: 'JetBrains Mono', cursive;
+    font-size: 0.6rem;
+    cursor: pointer;
+  }
+
   // &__link:is(:link, :visited) {
   //   display: block;
   //   width: 3.7rem;
@@ -59,13 +67,4 @@
   //   padding: -1rem;
   //   border-radius: inherit;
   // }
-
-  &__link:is(::after, ::before) {
-    box-sizing: border-box;
-  }
-
-  &__pg {
-    font-family: 'JetBrains Mono', cursive;
-    font-size: 0.6rem;
-  }
 }

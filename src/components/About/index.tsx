@@ -16,23 +16,3 @@ const About = () => {
 };
 
 export default About;
-
-{
-  /* <a href='/'>
-        <span>
-          Black Friday offers, available just now! But still need a longer link!
-        </span>
-      </a> */
-  /* <div className={styles.Modal__animatedTitle}>
-        <div className={styles.Modal__topText}>
-          <>
-            <span>How about here</span>
-            <span>is gonna be </span>
-          </>
-        </div>
-        <div className={styles.Modal__bottomText}>
-          <span>some text</span>
-        </div>
-      </div>
-    </div> */
-}
