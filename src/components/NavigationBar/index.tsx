@@ -17,17 +17,21 @@ const NavigationBar: FunctionComponent<INavigationBarProps> = () => {
         setScrollState(scrollCheck);
       }
     };
+
+    scrollState
+      ? document.documentElement.style.setProperty('--opacity', '0')
+      : document.documentElement.style.setProperty('--opacity', '1');
+
     document.addEventListener('scroll', onScroll);
 
     return () => {
+      document.documentElement.style.setProperty('--opacity', '0');
       document.removeEventListener('scroll', onScroll);
     };
   }, [scrollState, setScrollState]);
 
   return (
-    <nav
-      className={styles.NavigationBar}
-      style={scrollState ? undefined : { opacity: '1' }}>
+    <nav className={styles.NavigationBar}>
       <Logo />
       <Items />
       <Menu />
