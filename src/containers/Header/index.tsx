@@ -11,7 +11,7 @@ interface IHeaderProps {}
 const Header: FunctionComponent<IHeaderProps> = () => {
   return (
     <div className={styles.Header}>
-      {/* <img src={cover} alt='cover' className={styles.Header__cover} /> */}
+      <img src={cover} alt='cover' className={styles.Header__cover} />
       <NavigationBar />
       <NavigationItems />
       <About />

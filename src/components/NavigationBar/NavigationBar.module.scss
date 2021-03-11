@@ -20,18 +20,20 @@
     position: fixed;
     top: 0;
     left: 0;
-    min-height: 14vh;
-    min-width: 100%;
 
-    background: linear-gradient(to right, #000, #434343);
+    min-width: 100%;
+    min-height: 14vh;
+
     z-index: -1;
     opacity: var(--opacity);
+
+    background: linear-gradient(to right, #000, #434343);
+
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: nowrap;
 
-    transition: all 0.6s ease-in-out;
-    transition: opacity 0.5s linear;
+    transition: all 0.4s linear;
   }
 }
