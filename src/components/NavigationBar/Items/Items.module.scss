@@ -1,0 +1,39 @@
+@import '../../../sass/main.scss';
+
+.Items {
+  flex: 1;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  position: absolute;
+  top: 6vh;
+  right: 19vw;
+
+  & a {
+    font-size: 0.9rem;
+    font-family: 'JetBrains Mono';
+    color: #fff;
+    margin-left: 6rem;
+    text-decoration: none;
+
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 0.11rem;
+      width: 100%;
+      margin-top: 0.5rem;
+      background: #fff;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    &:hover::after {
+      animation: line-extend 0.5s ease-in-out;
+      opacity: 1;
+    }
+  }
+}

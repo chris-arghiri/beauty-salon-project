@@ -6,12 +6,12 @@ interface ILogoProps {}
 
 const Logo: FunctionComponent<ILogoProps> = () => {
   return (
-    <>
-      <img src={logo} alt='logo' className={styles.Logo} />
-      <a href='/' className={styles.Logo__name}>
-        Studio
+    <div className={styles.Logo}>
+      <a href='/'>
+        <img src={logo} alt='logo' className={styles.Logo__img} />
       </a>
-    </>
+      <div className={styles.Logo__name}>Studio</div>
+    </div>
   );
 };
 

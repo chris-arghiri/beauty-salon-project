@@ -1,19 +1,16 @@
 @import '../../sass/main.scss';
 
-// add liniar-gradient so the menu icon is ok visible
-
 .Sidebar {
   position: fixed;
   z-index: 99;
-  background-color: $color-white-default;
-  height: 100vh;
-  width: 17.5vw;
-  margin: 0 auto;
-  padding: 0 auto;
   bottom: 0;
   right: 0;
-  background: linear-gradient(-120deg, #000, #434343);
-  animation: open-menu 1s ease-in-out;
+  height: 100vh;
+  width: 15vw;
+  margin: 0 auto;
+  padding: 0 auto;
+  background: linear-gradient(to top, #000, #434343);
+  animation: open-menu 0.8s ease-in-out;
   transition: all 0.6s;
 
   &__close {

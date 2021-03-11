@@ -1,12 +1,12 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
-import styles from './AutoWrittingText.module.scss';
+import styles from './AutoWritingText.module.scss';
 
 interface IMessage {
   title?: string;
   message: string[];
 }
 
-const AutoWrittingText: FunctionComponent<IMessage> = ({ title, message }) => {
+const AutoWritingText: FunctionComponent<IMessage> = ({ title, message }) => {
   const [text, setText] = useState<string>('');
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
   const [speed, setSpeed] = useState<number | undefined>(150);
@@ -42,9 +42,9 @@ const AutoWrittingText: FunctionComponent<IMessage> = ({ title, message }) => {
   return (
     <h2>
       {title} &ndash; {text}
-      <span className={styles.AutoWrittingText__cursor} />
+      <span className={styles.AutoWritingText__cursor} />
     </h2>
   );
 };
 
-export default AutoWrittingText;
+export default AutoWritingText;

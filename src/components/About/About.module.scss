@@ -10,6 +10,8 @@
   left: 30vw;
   height: 70vh;
 
+  padding-left: 2rem;
+
   position: absolute;
   overflow: hidden;
 
@@ -22,6 +24,7 @@
   & a {
     font-weight: bold;
     font-size: 0.8rem;
+    text-decoration: none;
   }
 
   &__topText {
