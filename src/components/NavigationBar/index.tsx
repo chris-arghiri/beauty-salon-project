@@ -31,7 +31,9 @@ const NavigationBar: FunctionComponent<INavigationBarProps> = () => {
   }, [scrollState, setScrollState]);
 
   return (
-    <nav className={styles.NavigationBar}>
+    <nav
+      className={styles.NavigationBar}
+      style={scrollState ? undefined : { position: 'fixed' }}>
       <Logo />
       <Items />
       <Menu />
