@@ -1,0 +1,36 @@
+.SlideCard {
+  position: relative;
+  background: #000;
+
+  $border-radius-small: 1rem;
+
+  border-radius: $border-radius-small;
+  margin: auto 1.5rem;
+
+  width: 15rem;
+  height: 20rem;
+
+  &__before,
+  &__after {
+    display: flex;
+
+    position: absolute;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+
+    // width: 15rem;
+    // height: 20rem;
+
+    & img {
+      display: block;
+
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__slider {
+  }
+}

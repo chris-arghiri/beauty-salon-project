@@ -8,12 +8,11 @@
   height: 2.3rem;
 
   background: #fff;
-  // background: linear-gradient(120deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
   font-size: 1rem;
   letter-spacing: 0.1rem;
   text-decoration: none;
   text-align: center;
-  border-radius: 5rem;
+  border-radius: 2rem;
 
   z-index: 3;
 
@@ -26,13 +25,14 @@
     bottom: 0.1rem;
     text-align: center;
     background: #262626;
-    border-radius: 5rem;
+    border-radius: 2rem;
     transition: all 0.5s;
     z-index: 1;
     color: rgba(255, 255, 255, 1);
   }
 
   &:hover span {
+    background: #262626;
     color: rgba(255, 255, 255, 1);
   }
 
@@ -54,7 +54,7 @@
     );
     background-size: 200%;
     opacity: 0;
-    border-radius: 5rem;
+    border-radius: 2rem;
     transition: 0.5s;
     // #fb0094,
     // #00f,
@@ -96,7 +96,7 @@
     // );
     background-size: 400%;
     opacity: 0;
-    border-radius: 5rem;
+    border-radius: 2rem;
     filter: blur(1rem);
     transition: 0.5s;
 

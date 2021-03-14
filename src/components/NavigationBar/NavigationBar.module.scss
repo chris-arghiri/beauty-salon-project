@@ -24,7 +24,7 @@
     min-height: 14vh;
 
     z-index: -1;
-    opacity: var(--opacity);
+    opacity: var(--opacity, 0);
 
     background: linear-gradient(to right, #000, #434343);
 

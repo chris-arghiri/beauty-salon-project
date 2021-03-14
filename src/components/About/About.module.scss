@@ -6,35 +6,41 @@
   display: flex;
   flex-flow: column;
 
-  top: 30vh;
+  top: 26.5vh;
   left: 30vw;
   height: 70vh;
 
-  padding-left: 2rem;
+  padding-left: 1.5rem;
 
   position: absolute;
-  overflow: hidden;
+  // overflow: hidden;
+
+  z-index: 3;
 
   color: $color-white-default;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-family: 'JetBrains Mono';
   font-weight: 200;
-  white-space: nowrap;
+  // white-space: nowrap;
 
   & a {
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-decoration: none;
   }
 
   &__topText {
     top: 0;
+    bottom: 0;
     color: #fff;
     animation: show-top-text 1.25s;
     animation-delay: 0.5s;
     animation-fill-mode: both;
-    bottom: 0;
     transform: translate(0, 100%);
+
+    // overflow: hidden;
+    word-wrap: break-word;
+    height: 10rem;
 
     & span {
       display: block;
@@ -42,6 +48,21 @@
       font-weight: bold;
       font-size: 2rem;
     }
+
+    & p {
+      display: block;
+      text-align: left;
+      font-size: 0.8rem;
+      max-width: 35em;
+    }
+
+    // & p {
+    //   display: block;
+    //   text-align: left;
+    //   font-size: 0.9rem;
+    //   height: 10rem;
+    //   // line-height: 0.3rem;
+    // }
   }
 
   &__bottomText {

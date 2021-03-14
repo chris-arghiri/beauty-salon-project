@@ -24,7 +24,8 @@
   }
 
   &__link:is(:hover, :active) {
-    transform: scale(1.11);
+    border-radius: 25%;
+    transform: scale(1.12);
   }
 
   &__pg {
@@ -34,37 +35,4 @@
     font-size: 0.6rem;
     cursor: pointer;
   }
-
-  // &__link:is(:link, :visited) {
-  //   display: block;
-  //   width: 3.7rem;
-  //   height: 3.7rem;
-  //   padding: 1rem;
-  //   margin: 0.4rem 0;
-  //   box-sizing: border-box;
-  //   border: solid 0.15rem transparent;
-  //   border-radius: 50%;
-  //   text-decoration: none;
-  //   transition: all 0.6s;
-  // }
-
-  // &__link:is(:hover, :active) {
-  //   transform: scale(1.1);
-  // }
-
-  // &__link::before {
-  //   content: '';
-  //   position: absolute;
-  //   z-index: 1;
-  //   background: linear-gradient(
-  //     130deg,
-  //     #ff7a18,
-  //     #af002d 41.07%,
-  //     #319197 76.05%
-  //   );
-  //   width: 0.5rem;
-  //   height: 0.5rem;
-  //   padding: -1rem;
-  //   border-radius: inherit;
-  // }
 }
