@@ -10,12 +10,14 @@ interface IGalleryProps {}
 const Gallery: FunctionComponent<IGalleryProps> = () => {
   return (
     <div className={styles.Gallery} id='gallery'>
-      <SectionName color='#000' name='Gallery' />
-      <InfoCard />
-      <div className={styles.Gallery__cards}>
-        <SlideCard />
-        <SlideCard />
-        <SlideCard />
+      <div className={styles.Gallery__above}>
+        <SectionName color='#fff' name='Gallery' />
+        <InfoCard />
+        <div className={styles.Gallery__cards}>
+          <SlideCard />
+          <SlideCard />
+          <SlideCard />
+        </div>
       </div>
     </div>
   );

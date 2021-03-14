@@ -30,8 +30,8 @@
   background-size: cover;
 }
 
-@mixin set-fixed-section-cover($background-color) {
-  position: fixed;
+@mixin set-section-cover-above($background-color) {
+  position: relative;
   min-height: 100vh;
   background: $background-color;
   background-size: cover;

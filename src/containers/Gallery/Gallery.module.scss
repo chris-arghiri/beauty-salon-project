@@ -1,7 +1,7 @@
 @import '../../sass/main.scss';
 
 .Gallery {
-  @include set-section-cover(#fff);
+  @include set-section-cover(#262626);
 
   display: flex;
   justify-content: center;
@@ -14,5 +14,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__above {
+    z-index: 2;
+
+    background: #6f2232;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    min-height: 90vh;
+    min-width: 85vw;
   }
 }
