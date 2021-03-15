@@ -9,7 +9,11 @@
   width: 15vw;
   margin: 0 auto;
   padding: 0 auto;
-  background: linear-gradient(to top, #000, #434343);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(67, 67, 67, 0.8)
+  );
   animation: open-menu 0.8s ease-in-out;
   transition: all 0.6s;
 

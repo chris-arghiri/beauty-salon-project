@@ -1,7 +1,7 @@
 .NavigationBar {
   top: 0;
   left: 0;
-  min-height: 14vh;
+  height: 7.3vh;
   min-width: 100%;
   z-index: 999;
   position: absolute;
@@ -21,12 +21,16 @@
     left: 0;
 
     min-width: 100%;
-    min-height: 14vh;
+    height: 7.3vh;
 
     z-index: -1;
     opacity: var(--opacity, 0);
 
-    background: linear-gradient(to right, #000, #434343);
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(67, 67, 67, 0.8)
+    );
 
     display: flex;
     justify-content: space-between;

@@ -2,7 +2,7 @@ import React, { FunctionComponent, useEffect, useState } from 'react';
 import styles from './NavigationBar.module.scss';
 
 import Logo from './Logo';
-import Items from './Items';
+import NavBarItems from './NavBarItems';
 import Menu from './Menu';
 
 interface INavigationBarProps {}
@@ -35,7 +35,7 @@ const NavigationBar: FunctionComponent<INavigationBarProps> = () => {
       className={styles.NavigationBar}
       style={scrollState ? undefined : { position: 'fixed' }}>
       <Logo />
-      <Items />
+      <NavBarItems />
       <Menu />
     </nav>
   );

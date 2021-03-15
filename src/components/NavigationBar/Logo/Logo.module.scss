@@ -8,11 +8,11 @@
   align-items: flex-start;
 
   padding-top: 1vh;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
 
   position: absolute;
-  top: 3.5vh;
+  top: 0;
   left: 7vw;
 
   &__name {
@@ -20,8 +20,8 @@
     align-self: center;
 
     display: inline-block;
-    padding-top: 1.1rem;
-    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
 
     color: #fff;
     text-decoration: none;
@@ -34,6 +34,6 @@
 
   &__img {
     cursor: pointer;
-    width: 2.5rem;
+    width: 1.8rem;
   }
 }
