@@ -1,5 +1,5 @@
 @import '../../sass/main.scss';
 
 .Info {
-  @include set-section-cover(pink);
+  @include set-section-cover-under(pink);
 }

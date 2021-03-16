@@ -4,11 +4,20 @@ import style from './SectionName.module.scss';
 interface ISectionNameProps {
   name: string;
   color: string;
+  top: string | number;
+  left: string | number;
 }
 
-const SectionName: FunctionComponent<ISectionNameProps> = ({ name, color }) => {
+const SectionName: FunctionComponent<ISectionNameProps> = ({
+  name,
+  color,
+  top,
+  left
+}) => {
   return (
-    <p className={style.SectionName} style={{ color: `${color}` }}>
+    <p
+      className={style.SectionName}
+      style={{ color: `${color}`, top: `${top}`, left: `${left}` }}>
       {name}
     </p>
   );

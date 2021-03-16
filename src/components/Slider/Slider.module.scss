@@ -1,0 +1,25 @@
+.Slider {
+  position: relative;
+
+  top: 25vh;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  margin: auto 10vw;
+
+  overflow: hidden;
+
+  height: 75vh;
+  min-width: 80vw;
+
+  background: url('../../assets/images/header_bg.jpg');
+  background-size: cover;
+
+  border-radius: 1rem;
+
+  & img {
+    max-width: 100%;
+    border-radius: inherit;
+  }
+}
