@@ -12,12 +12,10 @@ const SliderContent: FunctionComponent<ISliderContentProps> = ({
 }) => {
   return (
     <div
+      className={style.SliderContent}
       style={{
         transform: `translateX(-${translate}px)`,
-        transition: `transform ease-out ${transition}s`,
-        height: '100%',
-        width: `100%`,
-        display: 'flex'
+        transition: `transform ease-out ${transition}s`
       }}
     />
   );
