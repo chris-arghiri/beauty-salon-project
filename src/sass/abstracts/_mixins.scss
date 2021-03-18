@@ -51,19 +51,10 @@
   background-size: cover;
 }
 
-@mixin set-section-cover-extra-large($background-color) {
-  position: relative;
-  top: -12vh;
-  min-height: 124vh;
-  background: $background-color;
-  background-size: cover;
-}
-
 @mixin set-section-cover-under($background-color) {
   position: relative;
-  // top: 0;
-  bottom: -12vh;
-  min-height: 100vh;
+  top: 12vh;
+  min-height: 124vh;
   background: $background-color;
   background-size: cover;
 }

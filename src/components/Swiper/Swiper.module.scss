@@ -1,4 +1,4 @@
-.Slider {
+.Swiper {
   position: relative;
 
   top: 25vh;
@@ -13,9 +13,10 @@
   height: 75vh;
   min-width: 80vw;
 
-  background: url('../../assets/images/header_bg.jpg');
   background-size: cover;
+  background-color: #fff;
 
+  // box-shadow: 0.2rem 0.2rem 0.3rem #fff;
   border-radius: 1rem;
 
   & img {
