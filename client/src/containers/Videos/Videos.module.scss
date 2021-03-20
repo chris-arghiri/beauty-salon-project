@@ -1,0 +1,19 @@
+@import '../../sass/main.scss';
+
+.Videos {
+  @include set-section-cover-above(#6f2232);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+
+  &__cards {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4.5rem;
+  }
+}

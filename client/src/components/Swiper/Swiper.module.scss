@@ -1,0 +1,27 @@
+.Swiper {
+  position: relative;
+
+  top: 30vh;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  margin: auto 10vw;
+
+  overflow: hidden;
+
+  height: 75vh;
+  min-width: 80vw;
+
+  background-size: cover;
+  border-radius: 0.8rem;
+  box-shadow: inset 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2),
+    inset -0.5rem -0.5rem 1.5rem rgba(255, 255, 255, 0.1),
+    0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.3),
+    -0.5rem -0.5rem 1.5rem rgba(255, 255, 255, 0.1);
+
+  & img {
+    max-width: 100%;
+    border-radius: inherit;
+  }
+}

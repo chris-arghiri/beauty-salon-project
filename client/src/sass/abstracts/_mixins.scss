@@ -1,0 +1,61 @@
+@mixin burger-button-line($background-color) {
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+  padding: 0 0.2rem;
+  position: absolute;
+  z-index: 100;
+  width: 1.25rem;
+  height: 0.12rem;
+  opacity: 0.9;
+  background: $background-color;
+  box-shadow: 0 0.2rem 0.5rem rgba(255, 101, 47, 0.2); //bad performance
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    padding: 0 0.2rem;
+    width: 1.25rem;
+    height: 0.12rem;
+    background: $color-white-default;
+    box-shadow: 0 0.2rem 0.5rem rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@mixin set-section-cover($background-color) {
+  position: relative;
+  min-height: 100vh;
+  background: $background-color;
+  background-size: cover;
+}
+
+@mixin set-section-cover-above($background-color) {
+  position: relative;
+  top: -12vh;
+  min-height: 100vh;
+  background: $background-color;
+  background-size: cover;
+}
+
+@mixin set-section-cover-large($background-color) {
+  position: relative;
+  top: -12vh;
+  min-height: 112vh;
+  background: $background-color;
+  background-size: cover;
+}
+
+@mixin set-section-cover-under($background-color) {
+  position: relative;
+  top: -12vh;
+  bottom: 12vh;
+  min-height: 99vh;
+  background: $background-color;
+  background-size: cover;
+}
