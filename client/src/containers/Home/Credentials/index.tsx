@@ -1,8 +1,9 @@
 import { FunctionComponent } from 'react';
 import styles from './Credentials.module.scss';
 
-import SectionName from '../../utilities/SectionName';
-import Swiper from '../../components/Swiper';
+import SectionName from '../../../utilities/SectionName';
+import Swiper from '../../../components/Swiper';
+
 interface ICredentialsProps {}
 
 const Credentials: FunctionComponent<ICredentialsProps> = () => {

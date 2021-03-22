@@ -1,14 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import styles from './Header.module.scss';
 
-// import photo1 from '../../assets/images/blonde-hair.jpg';
-// import photo2 from '../../assets/images/red-hair.jpeg';
+import headerImg from '../../../assets/images/header-bg-1.jpg';
 
-import headerImg from '../../assets/images/header-bg-1.jpg';
-
-import NavigationBar from '../../components/NavigationBar';
-import NavigationItems from '../../components/NavigationItems';
-import About from '../../components/About';
+import NavigationBar from '../../../components/NavigationBar';
+import NavigationItems from '../../../components/NavigationItems';
+import About from '../../../components/About';
 
 interface IHeaderProps {}
 

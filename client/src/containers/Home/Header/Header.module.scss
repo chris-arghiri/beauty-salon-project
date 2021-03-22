@@ -1,4 +1,4 @@
-@import '../../sass/main.scss';
+@import '../../../sass/main.scss';
 
 .Header {
   @include set-section-cover(#1a1a1d);
@@ -19,6 +19,7 @@
     right: 0;
 
     & img {
+      opacity: 0.8;
       position: relative;
       z-index: 1;
       width: 100%;

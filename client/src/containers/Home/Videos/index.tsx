@@ -8,8 +8,8 @@ import styles from './Videos.module.scss';
 
 import axios from 'axios';
 
-import SectionName from '../../utilities/SectionName';
-import VideoCard from '../../components/VideoCard';
+import SectionName from '../../../utilities/SectionName';
+import VideoCard from '../../../components/VideoCard';
 
 interface IVideosProps {}
 
