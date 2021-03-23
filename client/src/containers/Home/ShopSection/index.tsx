@@ -27,49 +27,55 @@ interface IShopSectionProps {}
 
 const ShopSection: FunctionComponent<IShopSectionProps> = () => {
   const headerRef = useRef<HTMLHeadingElement>(null);
+  const priceRef = useRef<HTMLHeadingElement>(null);
+  const descriptionRef = useRef<HTMLParagraphElement>(null);
+
+  const changeText = (element: React.RefObject<HTMLElement>, text: string) => {
+    if (element.current?.innerText !== null) {
+      return (element.current!.innerText = text);
+    }
+  };
 
   const handleInfo = (activeIndex: number) => {
-    // let headerInfoText: string | undefined = document.getElementById(
-    //   'headerInfo'
-    // )?.innerText;
-    // let priceInfoText: string | undefined = document.getElementById('priceInfo')
-    //   ?.innerText;
-    // let descriptionInfoText: string | undefined = document.getElementById(
-    //   'descriptionInfo'
-    // )?.innerText;
-    // if (headerInfoText !== undefined) {
-    //   if (activeIndex === 1) {
-    //     headerInfoText = 'Another text';
-    //   }
-    // }
-
-    // let asd = headerRef.current!.innerText;
-    if (activeIndex === 1) {
+    if (activeIndex === 0) {
+      changeText(headerRef, 'some text');
+      changeText(priceRef, 'maybe another value than the initial one??');
+      changeText(
+        descriptionRef,
+        'and another lorem ofc, how i hate them sometimes, why doesn/t emmet work when u need it, or hmmm?'
+      );
+      return;
     }
-    // // let conditions = [headerInfoText, priceInfoText, descriptionInfoText];
-
-    // if (activeIndex === 0 && !conditions.includes(undefined)) {
-    //   headerInfoText = 'Some Text';
-    //   console.log(headerInfoText);
-    // } else if (activeIndex === 1 && !conditions.includes(undefined)) {
-    //   headerInfoText = 'Another Text';
-    //   console.log(headerInfoText);
-    // } else if (activeIndex === 2 && !conditions.includes(undefined)) {
-    //   headerInfoText = 'And another one';
-    //   console.log(headerInfoText);
-    // } else {
-    //   console.log('not supported');
-    // }
+    if (activeIndex === 1) {
+      changeText(headerRef, 'hmm text');
+      changeText(priceRef, 'ok this one for sure $$$');
+      changeText(
+        descriptionRef,
+        'try lorem!!! just press the lorem pleassseee'
+      );
+      return;
+    }
+    if (activeIndex === 2) {
+      changeText(headerRef, 'so it does work after all');
+      changeText(priceRef, 'should i still try?? Someone hire me pls!!');
+      changeText(
+        descriptionRef,
+        'SOMETIMES YOU REALISE SOMETHING, SOMETIMES NOT :))'
+      );
+      return;
+    }
   };
 
   return (
     <div className={styles.ShopSection} id='shop'>
       <div className={styles.ShopSection__info}>
         <h1 ref={headerRef}>
-          <span id='headerInfo'>Some text</span>
+          <span>Some text</span>
         </h1>
-        <h4 id='priceInfo'>And another text, w/ price</h4>
-        <p id='descriptionInfo'>
+        <h4 ref={priceRef}>
+          <span>And another text, w/ price</span>
+        </h4>
+        <p ref={descriptionRef}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
           Omnis ex necessitatibus velit aliquid voluptas est odit, ea <br />
           perferendis at delectus esse illo! Minus rerum, animi a fugiat <br />
@@ -83,14 +89,8 @@ const ShopSection: FunctionComponent<IShopSectionProps> = () => {
           navigation
           centeredSlides
           slidesPerView={2}
-          onSlideChange={(slide) => {
-            console.log(slide.activeIndex);
-            handleInfo(slide.activeIndex);
-          }}
-          //   headerRef.current?.textContent ? 'Another Text' : 'ASD'
-          // }
-          // pagination={{ clickable: true }}
-          effect='coverflow'>
+          effect='coverflow'
+          onSlideChange={(slide) => handleInfo(slide.activeIndex)}>
           <SwiperSlide key={`slide-1`}>
             <img
               src={productImg}

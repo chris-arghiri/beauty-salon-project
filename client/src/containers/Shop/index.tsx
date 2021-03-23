@@ -4,7 +4,7 @@ import styles from './Shop.module.scss';
 interface IShopProps {}
 
 const Shop: FunctionComponent<IShopProps> = () => {
-  return <> </>;
+  return <div className={styles.Shop}> </div>;
 };
 
 export default Shop;
