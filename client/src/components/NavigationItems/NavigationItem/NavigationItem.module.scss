@@ -1,5 +1,5 @@
-@import '../../../sass/abstracts/variables';
-@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@use '../../../sass/abstracts' as *;
+@use '../../../sass/base' as *;
 
 .NavigationItem {
   display: flex;

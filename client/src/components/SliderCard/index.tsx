@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useRef } from 'react';
 
 import styles from './SliderCard.module.scss';
 import {
@@ -7,12 +7,24 @@ import {
   ReactCompareSliderImage
 } from 'react-compare-slider';
 
-import image1 from '../../assets/images/blonde-hair.jpg';
-import image2 from '../../assets/images/red-hair.jpeg';
+interface ISliderCardProps {
+  aboveImageURL: string;
+  behindImageURL: string;
+  id: number;
+}
 
-interface ISliderCardProps {}
+const SliderCard: FunctionComponent<ISliderCardProps> = ({
+  aboveImageURL,
+  behindImageURL,
+  id
+}) => {
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+  const linkRef = useRef<HTMLAnchorElement>(null);
 
-const SliderCard: FunctionComponent<ISliderCardProps> = () => {
+  const setOpacity = (name: string, value: string) => {
+    document.documentElement.style.setProperty(name, value);
+  };
+
   return (
     <div className={styles.SlideCard}>
       <div className={styles.SlideCard__container}>
@@ -27,16 +39,16 @@ const SliderCard: FunctionComponent<ISliderCardProps> = () => {
           }
           itemOne={
             <ReactCompareSliderImage
-              src={image1}
-              srcSet={image1}
+              src={aboveImageURL}
+              srcSet={aboveImageURL}
               alt='image1'
               style={{ borderRadius: '1rem', opacity: 0.9 }}
             />
           }
           itemTwo={
             <ReactCompareSliderImage
-              src={image2}
-              srcSet={image2}
+              src={behindImageURL}
+              srcSet={behindImageURL}
               alt='image2'
               style={{ borderRadius: '1rem', opacity: 0.7 }}
             />
@@ -44,11 +56,42 @@ const SliderCard: FunctionComponent<ISliderCardProps> = () => {
           onlyHandleDraggable
           boundsPadding={25}
           position={65}
+          id={`item-${id}`}
+          onPositionChange={(position) => {
+            if (position < 30) {
+              setOpacity('--before-opacity', '0.6');
+              setOpacity('--after-opacity', '1');
+              return;
+            }
+            if (position < 40) {
+              setOpacity('--before-opacity', '0.7');
+              setOpacity('--after-opacity', '0.9');
+              return;
+            }
+            if (position < 50) {
+              setOpacity('--before-opacity', '0.8');
+              setOpacity('--after-opacity', '0.8');
+              return;
+            }
+            if (position < 60) {
+              setOpacity('--before-opacity', '0.9');
+              setOpacity('--after-opacity', '0.7');
+              return;
+            }
+            if (position < 70) {
+              setOpacity('--before-opacity', '1');
+              setOpacity('--after-opacity', '0.6');
+              return;
+            }
+          }}
         />
         <div className={styles.SlideCard__description}>
-          <p>description</p>
-          <a href='/'>color</a>
-          {/* <div style={{ width: '1rem', height: '1rem', color: '#fff' }}></div> */}
+          <p ref={paragraphRef} className={styles.SlideCard__description__1}>
+            description
+          </p>
+          <a ref={linkRef} href='/'>
+            color
+          </a>
         </div>
       </div>
     </div>

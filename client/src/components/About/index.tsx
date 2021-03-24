@@ -9,14 +9,16 @@ const About = () => {
       <div className={styles.About__topText}>
         <span>Perfection at ease</span>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br /> Ut
-          unde doloremque quisquam facilis ipsa. <br />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut unde
+          doloremque quisquam facilis ipsa.
         </p>
       </div>
       <div className={styles.About__bottomText}>
-        <a href='/'>Here will be a link! Don't judge!</a>
+        <a href='/'>
+          <span>See available dates!</span>
+        </a>
       </div>
-      <GradientBorderButton url='#' text='Hover me' />
+      <GradientBorderButton url='#' text='Hover me' marginTop='1rem' />
     </div>
   );
 };

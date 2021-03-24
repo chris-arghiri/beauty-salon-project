@@ -38,11 +38,14 @@ const ShopSection: FunctionComponent<IShopSectionProps> = () => {
 
   const handleInfo = (activeIndex: number) => {
     if (activeIndex === 0) {
-      changeText(headerRef, 'some text');
-      changeText(priceRef, 'maybe another value than the initial one??');
+      changeText(headerRef, 'Some text');
+      changeText(priceRef, 'And another text, w/ price');
       changeText(
         descriptionRef,
-        'and another lorem ofc, how i hate them sometimes, why doesn/t emmet work when u need it, or hmmm?'
+        `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Omnis ex necessitatibus velit aliquid voluptas est odit, ea 
+        perferendis at delectus esse illo! Minus rerum, animi a fugiat 
+        mollitia iste. Suscipit.`
       );
       return;
     }
@@ -75,13 +78,15 @@ const ShopSection: FunctionComponent<IShopSectionProps> = () => {
         <h4 ref={priceRef}>
           <span>And another text, w/ price</span>
         </h4>
-        <p ref={descriptionRef}>
+        <p
+          ref={descriptionRef}
+          style={{ opacity: 0.7, transition: 'opacity 0.2s eases-in-out' }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
           Omnis ex necessitatibus velit aliquid voluptas est odit, ea <br />
           perferendis at delectus esse illo! Minus rerum, animi a fugiat <br />
           mollitia iste. Suscipit.
         </p>
-        <GradientBorderButton url='#' text='buy?' />
+        <GradientBorderButton url='/shop' text='buy?' marginTop='3rem' />
       </div>
       <div className={styles.ShopSection__slider}>
         <Swiper
@@ -92,25 +97,13 @@ const ShopSection: FunctionComponent<IShopSectionProps> = () => {
           effect='coverflow'
           onSlideChange={(slide) => handleInfo(slide.activeIndex)}>
           <SwiperSlide key={`slide-1`}>
-            <img
-              src={productImg}
-              alt='1'
-              style={{ listStyle: 'none', height: 'auto' }}
-            />
+            <img src={productImg} alt='1' />
           </SwiperSlide>
           <SwiperSlide key={`slide-2`}>
-            <img
-              src={productImg}
-              alt='2'
-              style={{ listStyle: 'none', height: 'auto' }}
-            />
+            <img src={productImg} alt='2' />
           </SwiperSlide>
           <SwiperSlide key={`slide-3`}>
-            <img
-              src={productImg}
-              alt='3'
-              style={{ listStyle: 'none', height: 'auto' }}
-            />
+            <img src={productImg} alt='3' />
           </SwiperSlide>
         </Swiper>
       </div>

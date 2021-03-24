@@ -10,7 +10,11 @@ const InfoCard: FunctionComponent<IinfoCardProps> = () => {
     <div className={styles.InfoCard}>
       <h1>Some information here</h1>
       <h3>And another information</h3>
-      <GradientBorderButton url='#' text='Press here →' />
+      <GradientBorderButton
+        url='/gallery'
+        text='Press here →'
+        marginTop='3rem'
+      />
     </div>
   );
 };

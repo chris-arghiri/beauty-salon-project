@@ -1,6 +1,7 @@
-.GradientBorderButton {
-  margin-top: 5rem;
+@use '../../sass/base' as *;
+@use '../../sass/abstracts' as *;
 
+.GradientBorderButton {
   position: relative;
   line-height: 2rem;
 

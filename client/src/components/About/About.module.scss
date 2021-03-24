@@ -1,4 +1,4 @@
-@import '../../sass/main.scss';
+@import '../../sass/main';
 
 .About {
   flex: 1;
@@ -13,15 +13,14 @@
   padding-left: 1.5rem;
 
   position: absolute;
-  // overflow: hidden;
+  overflow: hidden;
 
   z-index: 3;
 
-  color: $color-white-default;
+  color: #fff;
   font-size: 0.9rem;
   font-family: 'JetBrains Mono';
   font-weight: 200;
-  // white-space: nowrap;
 
   & a {
     font-weight: bold;
@@ -37,10 +36,7 @@
     animation-delay: 0.5s;
     animation-fill-mode: both;
     transform: translate(0, 100%);
-
-    // overflow: hidden;
     word-wrap: break-word;
-    height: 10rem;
 
     & span {
       display: block;
@@ -54,28 +50,26 @@
       text-align: left;
       font-size: 0.8rem;
       max-width: 35em;
+      line-height: 1rem;
     }
-
-    // & p {
-    //   display: block;
-    //   text-align: left;
-    //   font-size: 0.9rem;
-    //   height: 10rem;
-    //   // line-height: 0.3rem;
-    // }
   }
 
   &__bottomText {
     display: block;
     top: 0;
     bottom: 0;
-    background: linear-gradient(to right, #ff4b1f, #1fddff);
-    background-clip: text;
+    margin-top: 7rem;
     -webkit-text-fill-color: transparent;
     text-align: left;
     animation: show-bottom-text 0.75s;
     animation-delay: 1.7s;
     animation-fill-mode: both;
     transform: translate(0, -100%);
+    transition: all 0.1s ease-in-out;
+
+    & a {
+      background: linear-gradient(to right, #ff4b1f, #1fddff);
+      background-clip: text;
+    }
   }
 }

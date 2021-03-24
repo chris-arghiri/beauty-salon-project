@@ -1,4 +1,4 @@
-@import '../../../sass/main.scss';
+@import '../../../sass/main';
 
 .ShopSection {
   @include set-section-cover-above(#1a1a1d);
@@ -34,6 +34,8 @@
     height: 10rem;
 
     & img {
+      list-style: none;
+      height: auto;
       width: 100%;
     }
   }

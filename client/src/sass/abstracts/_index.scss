@@ -1,0 +1,8 @@
+@forward './functions';
+@forward './mixins';
+@forward './variables';
+
+@use './variables';
+.asd {
+  color: variables.$color-primary;
+}
