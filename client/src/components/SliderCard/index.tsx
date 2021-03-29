@@ -10,89 +10,92 @@ import {
 interface ISliderCardProps {
   aboveImageURL: string;
   behindImageURL: string;
-  id: number;
+  id: string;
+  description: string;
+  color: string;
 }
 
 const SliderCard: FunctionComponent<ISliderCardProps> = ({
   aboveImageURL,
   behindImageURL,
-  id
+  id,
+  description,
+  color
 }) => {
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const linkRef = useRef<HTMLAnchorElement>(null);
 
-  const setOpacity = (name: string, value: string) => {
-    document.documentElement.style.setProperty(name, value);
+  const setOpacity = (element: React.RefObject<HTMLElement>, value: string) => {
+    if (element.current) {
+      element.current.style.opacity = value;
+    }
+  };
+
+  const setItemOpacity = (position: number, itemId: string) => {
+    if (itemId === id) {
+      if (position < 30) {
+        console.log(paragraphRef);
+        setOpacity(paragraphRef, '0.6');
+        setOpacity(linkRef, '1');
+      } else if (position < 40) {
+        setOpacity(paragraphRef, '0.7');
+        setOpacity(linkRef, '0.9');
+      } else if (position < 50) {
+        setOpacity(paragraphRef, '0.8');
+        setOpacity(linkRef, '0.8');
+      } else if (position < 60) {
+        setOpacity(paragraphRef, '0.9');
+        setOpacity(linkRef, '0.7');
+      } else {
+        setOpacity(paragraphRef, '1');
+        setOpacity(linkRef, '0.6');
+      }
+    }
   };
 
   return (
     <div className={styles.SlideCard}>
-      <div className={styles.SlideCard__container}>
-        <ReactCompareSlider
-          handle={
-            <ReactCompareSliderHandle
-              buttonStyle={{
-                width: '0.35rem',
-                height: '0.35rem'
-              }}
-            />
-          }
-          itemOne={
-            <ReactCompareSliderImage
-              src={aboveImageURL}
-              srcSet={aboveImageURL}
-              alt='image1'
-              style={{ borderRadius: '1rem', opacity: 0.9 }}
-            />
-          }
-          itemTwo={
-            <ReactCompareSliderImage
-              src={behindImageURL}
-              srcSet={behindImageURL}
-              alt='image2'
-              style={{ borderRadius: '1rem', opacity: 0.7 }}
-            />
-          }
-          onlyHandleDraggable
-          boundsPadding={25}
-          position={65}
-          id={`item-${id}`}
-          onPositionChange={(position) => {
-            if (position < 30) {
-              setOpacity('--before-opacity', '0.6');
-              setOpacity('--after-opacity', '1');
-              return;
-            }
-            if (position < 40) {
-              setOpacity('--before-opacity', '0.7');
-              setOpacity('--after-opacity', '0.9');
-              return;
-            }
-            if (position < 50) {
-              setOpacity('--before-opacity', '0.8');
-              setOpacity('--after-opacity', '0.8');
-              return;
-            }
-            if (position < 60) {
-              setOpacity('--before-opacity', '0.9');
-              setOpacity('--after-opacity', '0.7');
-              return;
-            }
-            if (position < 70) {
-              setOpacity('--before-opacity', '1');
-              setOpacity('--after-opacity', '0.6');
-              return;
-            }
-          }}
-        />
-        <div className={styles.SlideCard__description}>
-          <p ref={paragraphRef} className={styles.SlideCard__description__1}>
-            description
-          </p>
-          <a ref={linkRef} href='/'>
-            color
-          </a>
-        </div>
+      <ReactCompareSlider
+        handle={
+          <ReactCompareSliderHandle
+            buttonStyle={{
+              width: '0',
+              height: '0'
+            }}
+          />
+        }
+        itemOne={
+          <ReactCompareSliderImage
+            src={aboveImageURL}
+            srcSet={aboveImageURL}
+            alt='image1'
+            style={{ borderRadius: '1rem', opacity: 0.9, width: '100%' }}
+          />
+        }
+        itemTwo={
+          <ReactCompareSliderImage
+            src={behindImageURL}
+            srcSet={behindImageURL}
+            alt='image2'
+            style={{ borderRadius: '1rem', opacity: 0.7, width: '100%' }}
+          />
+        }
+        style={{ width: '14.5rem', height: '100%' }}
+        onlyHandleDraggable
+        boundsPadding={25}
+        position={65}
+        id={id}
+        onPositionChange={(position) => {
+          setItemOpacity(position, id);
+        }}
+      />
+      <div className={styles.SlideCard__description}>
+        <p style={{ opacity: '0.4' }} ref={paragraphRef}>
+          {description}
+        </p>
+        <a ref={linkRef} href='/'>
+          {color}
+        </a>
       </div>
     </div>
   );

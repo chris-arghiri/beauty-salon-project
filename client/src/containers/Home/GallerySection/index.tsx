@@ -21,9 +21,27 @@ const GallerySection: FunctionComponent<IGallerySectionProps> = () => {
         <SectionName color='#fff' name='Gallery' top='0' left='5vw' />
         <InfoCard />
         <div className={styles.GallerySection__cards}>
-          <SliderCard aboveImageURL={image1} behindImageURL={image2} id={1} />
-          <SliderCard aboveImageURL={image3} behindImageURL={image4} id={2} />
-          <SliderCard aboveImageURL={image5} behindImageURL={image6} id={3} />
+          <SliderCard
+            aboveImageURL={image1}
+            behindImageURL={image2}
+            id={'1'}
+            description={'description'}
+            color={'white'}
+          />
+          <SliderCard
+            aboveImageURL={image3}
+            behindImageURL={image4}
+            id={'2'}
+            description={'description'}
+            color={'black'}
+          />
+          <SliderCard
+            aboveImageURL={image5}
+            behindImageURL={image6}
+            id={'3'}
+            description={'description'}
+            color={'yellow'}
+          />
         </div>
       </div>
     </div>

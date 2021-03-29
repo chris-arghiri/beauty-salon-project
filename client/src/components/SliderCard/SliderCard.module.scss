@@ -1,51 +1,28 @@
 .SlideCard {
   position: relative;
 
-  margin: auto 1.3rem;
-  margin-top: 2rem;
-  width: 14rem;
+  height: 22rem;
+  width: 14.5rem;
 
-  &__container {
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-size: cover;
 
-    display: flex;
-    flex-direction: column;
-
-    background-size: cover;
-
-    border-radius: 0.8rem;
-    box-shadow: 0.2rem 0.2rem black;
-
-    height: 22rem;
-
-    & img {
-      height: auto;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
+  border-radius: 0.8rem;
 
   &__description {
-    flex: 1;
+    width: 14.5rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    &__1 {
-      opacity: var(--before-opacity, 0.4);
-    }
-    & p {
-      font-size: 1rem;
-      color: #fff;
-      transition: opacity 0.1s ease-in-out;
-    }
-
-    & a {
+    & p,
+    a {
       text-decoration: none;
       font-size: 1rem;
       color: #fff;
-      opacity: var(--after-opacity, 0.4);
-      transition: opacity 0.1s ease-in-out;
     }
   }
 }

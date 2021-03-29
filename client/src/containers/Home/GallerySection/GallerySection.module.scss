@@ -9,11 +9,11 @@
   text-align: start;
 
   &__cards {
+    margin-top: 2rem;
     flex: 1;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
   }
 
   &__above {
