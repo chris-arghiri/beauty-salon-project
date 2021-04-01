@@ -1,7 +1,6 @@
 .NavigationBar {
   top: 0;
   left: 0;
-  height: 7.3vh;
   min-width: 100%;
   z-index: 999;
   position: absolute;
@@ -21,7 +20,7 @@
     left: 0;
 
     min-width: 100%;
-    height: 7.3vh;
+    height: 6.5vh;
 
     z-index: -1;
     opacity: var(--opacity, 0);

@@ -24,7 +24,7 @@ const Slider: FunctionComponent<ISliderProps> = () => {
       <Swiper
         id='main'
         navigation
-        pagination={{ clickable: true }}
+        pagination={{ clickable: true, dynamicBullets: true }}
         effect='fade'
         autoplay={{ delay: 4000, disableOnInteraction: false }}>
         <SwiperSlide key={`slide-1`}>

@@ -14,8 +14,8 @@
   cursor: pointer;
 
   position: absolute;
-  top: 1.5vh;
-  right: 13vw;
+  top: 1vh;
+  right: 12.5vw;
 
   opacity: 0.9;
 
@@ -27,11 +27,11 @@
     @include burger-button-line($color-white-default);
 
     &::before {
-      transform: translate(-0.25rem, -0.3rem);
+      transform: translate(-0.2rem, -0.3rem);
     }
 
     &::after {
-      transform: translate(-0.25rem, 0.3rem);
+      transform: translate(-0.2rem, 0.3rem);
     }
   }
 

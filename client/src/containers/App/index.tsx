@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import Home from '../Home';

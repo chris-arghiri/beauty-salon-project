@@ -2,7 +2,8 @@ import React, {
   FunctionComponent,
   useCallback,
   useEffect,
-  useState
+  useState,
+  useRef
 } from 'react';
 import styles from './Videos.module.scss';
 
@@ -14,7 +15,10 @@ import VideoCard from '../../../components/VideoCard';
 interface IVideosProps {}
 
 const Videos: FunctionComponent<IVideosProps> = () => {
+  const videoCardsRef = useRef<HTMLDivElement>(null);
+
   const [url, setURL] = useState<string | undefined>('');
+  const [autoplayArea, setAutoplayArea] = useState<boolean>(false);
 
   const fetchAPI = useCallback(async () => {
     await axios
@@ -40,11 +44,23 @@ const Videos: FunctionComponent<IVideosProps> = () => {
     fetchAPI();
   }, [fetchAPI]);
 
+  useEffect(() => {
+    window.addEventListener('scroll', startAutoplay);
+    return () => {
+      window.removeEventListener('scroll', startAutoplay);
+    };
+  });
+
+  const startAutoplay = () => {
+    window.pageYOffset >= 500 ? setAutoplayArea(true) : setAutoplayArea(false);
+    console.log(window.pageYOffset);
+  };
+
   return (
     <div className={styles.Videos} id='videos'>
       <SectionName name='Videos' color='#fff' top='3vh' left='7vw' />
-      <div className={styles.Videos__cards}>
-        <VideoCard url={url} autoplay={true} />
+      <div ref={videoCardsRef} className={styles.Videos__cards}>
+        <VideoCard url={url} autoplay={autoplayArea} />
         <VideoCard url={url} autoplay={false} />
         <VideoCard url={url} autoplay={false} />
       </div>

@@ -34,7 +34,6 @@ const SliderCard: FunctionComponent<ISliderCardProps> = ({
   const setItemOpacity = (position: number, itemId: string) => {
     if (itemId === id) {
       if (position < 30) {
-        console.log(paragraphRef);
         setOpacity(paragraphRef, '0.6');
         setOpacity(linkRef, '1');
       } else if (position < 40) {

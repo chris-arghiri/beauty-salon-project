@@ -7,8 +7,10 @@ interface IinfoProps {}
 
 const Info: FunctionComponent<IinfoProps> = () => {
   const containerStyle = {
-    width: '70rem',
-    height: '30rem'
+    top: '5vh',
+    left: '10vw',
+    width: '25rem',
+    height: '25rem'
   };
 
   const center = {
@@ -18,7 +20,7 @@ const Info: FunctionComponent<IinfoProps> = () => {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyAuCqr9q1soEE9Atjt64EdHSFuANK9xyzE'
+    googleMapsApiKey: ''
   });
 
   const [map, setMap] = useState(null);
@@ -28,7 +30,6 @@ const Info: FunctionComponent<IinfoProps> = () => {
     // const bounds = new window. .google.maps.LatLngBounds();
     // const bounds = new InfoWindow
     // map.fitBounds(bounds);
-    // console.log(InfoWindow);
     setMap(map);
   }, []);
 
@@ -42,7 +43,7 @@ const Info: FunctionComponent<IinfoProps> = () => {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
-          zoom={10}
+          zoom={17}
           onLoad={onLoad}
           onUnmount={onUnmount}>
           {/* Child components, such as markers, info windows, etc. */}
