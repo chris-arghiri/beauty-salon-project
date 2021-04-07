@@ -1,0 +1,5 @@
+@import '../../../sass/main';
+
+.Map {
+  @include set-section-cover-under(#1a1a1d);
+}

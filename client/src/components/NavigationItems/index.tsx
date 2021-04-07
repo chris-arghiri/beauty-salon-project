@@ -18,7 +18,7 @@ const NavigationItems = () => (
         Shop
       </NavigationItem>
       <NavigationItem id='info' color='#f59794'>
-        Info
+        Location
       </NavigationItem>
     </ul>
   </>

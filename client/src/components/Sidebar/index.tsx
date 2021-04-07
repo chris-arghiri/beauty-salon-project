@@ -7,26 +7,22 @@ export interface IModalProps {
 
 const Sidebar: FunctionComponent<IModalProps> = ({ isOpened }) => {
   return (
-    <div
-      className={
-        isOpened ? styles.Sidebar : undefined /*styles.Sidebar__close*/
-      }
-      hidden={!isOpened}>
+    <div className={isOpened ? styles.Sidebar : undefined} hidden={!isOpened}>
       <ul>
         <li>
-          <a href='/'>GALLERY</a>
+          <a href='#gallery'>GALLERY</a>
         </li>
         <li>
-          <a href='/'>CREDENTIALS</a>
+          <a href='#credentials'>CREDENTIALS</a>
         </li>
         <li>
-          <a href='/'>VIDEOS</a>
+          <a href='#videos'>VIDEOS</a>
         </li>
         <li>
-          <a href='/'>SHOP</a>
+          <a href='#shop'>SHOP</a>
         </li>
         <li>
-          <a href='/'>INFO</a>
+          <a href='#info'>INFO</a>
         </li>
         <li>
           <a href='/'>COVID-19</a>

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import styles from './About.module.scss';
 
 import GradientBorderButton from '../../utilities/GradientBorderButton';
 
-const About = () => {
+interface IAboutProps {}
+
+const About: FunctionComponent<IAboutProps> = () => {
   return (
     <div className={styles.About}>
       <div className={styles.About__topText}>

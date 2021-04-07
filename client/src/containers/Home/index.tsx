@@ -4,9 +4,10 @@ import styles from './Home.module.scss';
 import Header from './Header';
 import GallerySection from './GallerySection';
 import Credentials from './Credentials';
+import Info from './Info';
 import Videos from './Videos';
 import ShopSection from './ShopSection';
-import Info from './Info';
+import Map from './Map';
 
 interface IHomeProps {}
 
@@ -16,9 +17,10 @@ const Home: FunctionComponent<IHomeProps> = () => {
       <Header />
       <GallerySection />
       <Credentials />
+      <Info />
       <Videos />
       <ShopSection />
-      <Info />
+      <Map />
     </div>
   );
 };

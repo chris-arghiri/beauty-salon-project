@@ -1,5 +1,16 @@
 @import '../../../sass/main';
 
 .Info {
-  @include set-section-cover-under(#1a1a1d);
+  @include set-section-cover-large(#1a1a1d);
+  background: url('../../../assets/images/header_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  & h1 {
+    display: block;
+    color: #fff;
+    font-size: 7rem;
+    margin-left: 10rem;
+    padding-top: 10rem;
+  }
 }

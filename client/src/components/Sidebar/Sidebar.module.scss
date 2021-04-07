@@ -1,10 +1,9 @@
-@use '../../sass/abstracts' as *;
-@use '../../sass/base' as *;
+@import '../../sass/main';
 
 .Sidebar {
   position: fixed;
   z-index: 99;
-  bottom: 0;
+  top: 0;
   right: 0;
   height: 100vh;
   width: 15vw;
@@ -15,59 +14,59 @@
     rgba(0, 0, 0, 0.8),
     rgba(67, 67, 67, 0.8)
   );
-  animation: open-menu 0.8s ease-in-out;
+  animation: open-menu 0.7s ease-in-out;
   transition: all 0.6s;
-
-  &__close {
-    animation: close-menu 3s ease-in-out;
-    transition: all 3s;
-  }
 
   & a {
     color: #fff;
-    background-clip: padding-box;
     text-decoration: none;
-
+    font-size: 0.8rem;
+    padding-top: 0.3rem;
     opacity: 0.8;
 
     &:hover {
       opacity: 1;
     }
 
-    &::after {
-      content: '';
-      display: block;
-      height: 0.11rem;
-      width: 100%;
-      margin-top: 0.15rem;
-      background: #fff;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
+    // @media (oritentation: landscape) {
 
-    &:hover::after {
-      animation: line-extend 0.5s ease-in-out;
-      opacity: 1;
-    }
+    // }
   }
 
   & ul {
+    padding-top: 15vh;
+    padding-left: 2vw;
+    height: 80%;
+
+    flex: 1;
+    list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: flex-end;
-
-    height: 75vh;
-    width: 20vw;
-
-    padding-top: 33vh;
-    padding-right: 7vw;
-    list-style: none;
+    align-items: flex-start;
   }
 
   & li {
-    flex: 1;
-    text-align: start;
-    padding: 4vmin;
+    &::before {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      inset: 0 0 0 0;
+      background: hsl(200, 100%, 80%);
+      z-index: 98;
+      transition: transform 0.3s ease;
+    }
+
+    &::before:hover {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 }
