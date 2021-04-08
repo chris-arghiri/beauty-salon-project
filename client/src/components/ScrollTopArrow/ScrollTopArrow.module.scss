@@ -1,0 +1,30 @@
+.ScrollTopArrow {
+  background: black;
+  position: fixed;
+  bottom: 0;
+  right: 5vw;
+  align-items: center;
+  width: 3rem;
+  justify-content: center;
+  z-index: 10000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background: #6f2232;
+  }
+
+  & span {
+    color: #fff;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

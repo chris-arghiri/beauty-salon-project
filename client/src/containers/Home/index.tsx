@@ -7,7 +7,7 @@ import Credentials from './Credentials';
 import Info from './Info';
 import Videos from './Videos';
 import ShopSection from './ShopSection';
-import Map from './Map';
+import Maps from './Maps';
 
 interface IHomeProps {}
 
@@ -20,7 +20,7 @@ const Home: FunctionComponent<IHomeProps> = () => {
       <Info />
       <Videos />
       <ShopSection />
-      <Map />
+      <Maps />
     </div>
   );
 };

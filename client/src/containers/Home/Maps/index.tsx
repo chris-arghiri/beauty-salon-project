@@ -1,15 +1,16 @@
 import React, { FunctionComponent, useState, useCallback } from 'react';
-import styles from './Map.module.scss';
+import styles from './Maps.module.scss';
 
+import Footer from '../../../components/Footer';
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
-interface IMapProps {}
+interface IMapsProps {}
 
-const Map: FunctionComponent<IMapProps> = () => {
+const Maps: FunctionComponent<IMapsProps> = () => {
   const containerStyle = {
-    top: '7vh',
+    top: '5vh',
     width: '100%',
-    height: '85vh'
+    height: '94vh'
   };
 
   const center = {
@@ -23,7 +24,6 @@ const Map: FunctionComponent<IMapProps> = () => {
   });
 
   const [map, setMap] = useState(null);
-  console.log(map);
 
   const onLoad = useCallback((map) => {
     // const bounds = new window. .google.maps.LatLngBounds();
@@ -37,7 +37,7 @@ const Map: FunctionComponent<IMapProps> = () => {
   }, []);
 
   return (
-    <div className={styles.Map} id='info'>
+    <div className={styles.Maps} id='info'>
       {isLoaded ? (
         <GoogleMap
           mapContainerStyle={containerStyle}
@@ -51,8 +51,10 @@ const Map: FunctionComponent<IMapProps> = () => {
       ) : (
         <></>
       )}
+      {console.log(map)}
+      <Footer />
     </div>
   );
 };
 
-export default Map;
+export default Maps;

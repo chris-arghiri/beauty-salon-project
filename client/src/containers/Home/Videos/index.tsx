@@ -52,8 +52,11 @@ const Videos: FunctionComponent<IVideosProps> = () => {
   });
 
   const startAutoplay = () => {
-    window.pageYOffset >= 500 ? setAutoplayArea(true) : setAutoplayArea(false);
-    console.log(window.pageYOffset);
+    if (window.pageYOffset >= 600) {
+      setAutoplayArea(true);
+    } else {
+      setAutoplayArea(false);
+    }
   };
 
   return (

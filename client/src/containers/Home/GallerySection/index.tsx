@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent } from 'react';
 import styles from './GallerySection.module.scss';
 
 import SectionName from '../../../utilities/SectionName';

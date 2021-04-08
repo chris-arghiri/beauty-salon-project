@@ -6,6 +6,7 @@ import Gallery from '../Gallery';
 import Shop from '../Shop';
 
 import NavigationBar from '../../components/NavigationBar';
+import ScrollTopArrow from '../../components/ScrollTopArrow';
 
 interface IAppProps {}
 
@@ -13,6 +14,7 @@ const App: FunctionComponent<IAppProps> = () => {
   return (
     <Router>
       <NavigationBar />
+      <ScrollTopArrow />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/gallery' component={Gallery} />

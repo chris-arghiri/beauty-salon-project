@@ -4,7 +4,7 @@ import styles from './Footer.module.scss';
 interface IFooterProps {}
 
 const Footer: FunctionComponent<IFooterProps> = () => {
-  return <div className={styles.Footer}></div>;
+  return <div className={styles.Footer} />;
 };
 
 export default Footer;
