@@ -8,13 +8,15 @@ interface IVideoCardProps {
 
 const VideoCard: FunctionComponent<IVideoCardProps> = ({ url, autoplay }) => (
   <div className={styles.VideoCard}>
-    <video
-      src={url}
-      autoPlay={autoplay}
-      muted
-      onMouseOver={(event) => (event.target as HTMLMediaElement).play()}
-      onMouseOut={(event) => (event.target as HTMLMediaElement).pause()}
-    />
+    <div className={styles.VideoCard__wrapper}>
+      <video
+        src={url}
+        autoPlay={autoplay}
+        muted
+        onMouseOver={(event) => (event.target as HTMLMediaElement).play()}
+        onMouseOut={(event) => (event.target as HTMLMediaElement).pause()}
+      />
+    </div>
   </div>
 );
 
