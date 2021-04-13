@@ -1,4 +1,10 @@
-import React, { FunctionComponent, useState, useCallback, useRef } from 'react';
+import React, {
+  FunctionComponent,
+  useCallback,
+  useRef,
+  useEffect,
+  useState
+} from 'react';
 import styles from './Maps.module.scss';
 
 import Footer from '../../../components/Footer';
@@ -9,7 +15,6 @@ import {
   InfoWindow
 } from '@react-google-maps/api';
 import { Libraries } from '@react-google-maps/api/dist/utils/make-load-script-url';
-import { env } from 'process';
 
 interface IMapsProps {}
 
@@ -25,10 +30,15 @@ const Maps: FunctionComponent<IMapsProps> = () => {
     lng: 28.8269086
   };
 
-  const libraries: Libraries = ['places'];
+  const centerInfoWindow = {
+    lat: 47.019,
+    lng: 28.8269086
+  };
 
+  const libraries: Libraries = ['places'];
+  const apiKey: string = process.env.REACT_APP_GOOGLE_MAPS_API_KEY || '';
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: apiKey,
     libraries
   });
 
@@ -38,16 +48,40 @@ const Maps: FunctionComponent<IMapsProps> = () => {
     mapRef.current = map;
   }, []);
 
+  const onMapUnmount = useCallback(() => {
+    mapRef.current = undefined;
+  }, []);
+
+  const [isClosed, setIsClosed] = useState<boolean>(false);
+
+  const handleMarkerClick = () => {
+    setIsClosed(false);
+  };
+
+  const handleWindowClose = () => {
+    setIsClosed(true);
+  };
+
   return (
     <div className={styles.Maps} id='info'>
       {isLoaded ? (
         <GoogleMap
+          onLoad={onMapLoad}
+          onUnmount={onMapUnmount}
           mapContainerStyle={containerStyle}
           center={center}
-          zoom={17}
-          onLoad={onMapLoad}>
-          {/* Child components, such as markers, info windows, etc. */}
-          <Marker position={center} />
+          zoom={17}>
+          <Marker
+            clickable
+            animation={1}
+            position={center}
+            onClick={handleMarkerClick}>
+            {!isClosed && (
+              <InfoWindow position={center} onCloseClick={handleWindowClose}>
+                <h4>Something</h4>
+              </InfoWindow>
+            )}
+          </Marker>
         </GoogleMap>
       ) : (
         <></>
