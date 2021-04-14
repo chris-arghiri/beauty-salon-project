@@ -1,10 +1,4 @@
-import React, {
-  FunctionComponent,
-  useCallback,
-  useRef,
-  useEffect,
-  useState
-} from 'react';
+import React, { FunctionComponent, useCallback, useRef, useState } from 'react';
 import styles from './Maps.module.scss';
 
 import Footer from '../../../components/Footer';
@@ -27,11 +21,6 @@ const Maps: FunctionComponent<IMapsProps> = () => {
 
   const center = {
     lat: 47.0186885,
-    lng: 28.8269086
-  };
-
-  const centerInfoWindow = {
-    lat: 47.019,
     lng: 28.8269086
   };
 
@@ -78,7 +67,7 @@ const Maps: FunctionComponent<IMapsProps> = () => {
             onClick={handleMarkerClick}>
             {!isClosed && (
               <InfoWindow position={center} onCloseClick={handleWindowClose}>
-                <h4>Something</h4>
+                <h3>We're here!</h3>
               </InfoWindow>
             )}
           </Marker>

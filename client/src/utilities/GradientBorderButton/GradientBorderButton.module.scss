@@ -13,7 +13,7 @@
   letter-spacing: 0.1rem;
   text-decoration: none;
   text-align: center;
-  border-radius: 1.8rem;
+  border-radius: 2rem;
 
   z-index: 3;
 
@@ -25,15 +25,14 @@
     right: 0.1rem;
     bottom: 0.1rem;
     text-align: center;
-    background: #1a1a1d;
+    background: var(--color-primary);
     border-radius: 1.8rem;
     transition: all 0.5s;
     z-index: 1;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.9);
   }
 
   &:hover span {
-    background: #262626;
     color: rgba(255, 255, 255, 1);
   }
 
@@ -57,14 +56,6 @@
     opacity: 0;
     border-radius: 1.8rem;
     transition: 0.5s;
-    // #fb0094,
-    // #00f,
-    // #0f0,
-    // #ff0,
-    // #fb0094,
-    // #00f,
-    // #0f0,
-    // #ff0
     animation: animate 10s linear infinite;
   }
 

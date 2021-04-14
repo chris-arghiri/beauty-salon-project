@@ -1,5 +1,5 @@
 @import '../../../sass/main';
 
 .Maps {
-  @include set-section-cover-under(#1a1a1d);
+  @include set-section-cover-under(var(--color-primary));
 }

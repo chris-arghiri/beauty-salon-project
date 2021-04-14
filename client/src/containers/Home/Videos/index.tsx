@@ -17,26 +17,45 @@ interface IVideosProps {}
 const Videos: FunctionComponent<IVideosProps> = () => {
   const videoCardsRef = useRef<HTMLDivElement>(null);
 
-  const [url, setURL] = useState<string | undefined>('');
+  const [firstUrl, setFirstUrl] = useState<string | undefined>('');
+  const [secondUrl, setSecondUrl] = useState<string | undefined>('');
+  const [thirdUrl, setThirdUrl] = useState<string | undefined>('');
   const [autoplayArea, setAutoplayArea] = useState<boolean>(false);
 
   const fetchAPI = useCallback(async () => {
+    const headers = {
+      headers: {
+        Authorization:
+          '563492ad6f91700001000001c7556e8ee0f24cb6a0d7a0291a166a7b',
+        Accept: 'application/json'
+      }
+    };
+    const requestOne = axios.get(
+      'https://api.pexels.com/videos/videos/3996898',
+      headers
+    );
+    const requestTwo = axios.get(
+      'https://api.pexels.com/videos/videos/3996890',
+      headers
+    );
+    const requestThree = axios.get(
+      'https://api.pexels.com/videos/videos/3996895',
+      headers
+    );
     await axios
-      .get('https://api.pexels.com/videos/videos/3996898', {
-        headers: {
-          Authorization:
-            '563492ad6f91700001000001c7556e8ee0f24cb6a0d7a0291a166a7b',
-          Accept: 'application/json'
-        }
-      })
-      .then((result) => {
-        const data = result.data;
-        const videoFiles = data.video_files;
-        const link = videoFiles[0].link;
-        setURL(link);
-      })
-      .catch((error) => {
-        console.log(error);
+      .all([requestOne, requestTwo, requestThree])
+      .then(
+        axios.spread((...responses) => {
+          const firstLink = responses[0].data.video_files[0].link;
+          setFirstUrl(firstLink);
+          const secondLink = responses[1].data.video_files[0].link;
+          setSecondUrl(secondLink);
+          const thirdLink = responses[2].data.video_files[0].link;
+          setThirdUrl(thirdLink);
+        })
+      )
+      .catch((errors) => {
+        console.log(errors);
       });
   }, []);
 
@@ -61,11 +80,34 @@ const Videos: FunctionComponent<IVideosProps> = () => {
 
   return (
     <div className={styles.Videos} id='videos'>
-      <SectionName name='Videos' color='#fff' top='3vh' left='7vw' />
+      <SectionName
+        name='Just.'
+        color='var(--color-white)'
+        top='4vh'
+        left='14vw'
+        right=''
+        bottom=''
+      />
+      <SectionName
+        name='Do.'
+        color='var(--color-white)'
+        top='4vh'
+        left='47vw'
+        right=''
+        bottom=''
+      />
+      <SectionName
+        name='It.'
+        color='var(--color-white)'
+        top='4vh'
+        right='15vw'
+        bottom=''
+        left=''
+      />
       <div ref={videoCardsRef} className={styles.Videos__cards}>
-        <VideoCard url={url} autoplay={autoplayArea} />
-        <VideoCard url={url} autoplay={false} />
-        <VideoCard url={url} autoplay={false} />
+        <VideoCard url={firstUrl} autoplay={autoplayArea} />
+        <VideoCard url={secondUrl} autoplay={false} />
+        <VideoCard url={thirdUrl} autoplay={false} />
       </div>
     </div>
   );

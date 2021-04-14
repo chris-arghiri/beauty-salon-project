@@ -11,6 +11,12 @@
 
   border-radius: 0.8rem;
 
+  box-shadow: 0 -0.02rem 0.02rem var(--color-black);
+  & img {
+    border-radius: inherit;
+    // box-shadow: 0.3rem 0.3rem 0.1rem #ccc;
+  }
+
   &__description {
     width: 14.5rem;
 

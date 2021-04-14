@@ -1,7 +1,7 @@
 @import '../../../sass/main';
 
 .ShopSection {
-  @include set-section-cover-above(#1a1a1d);
+  @include set-section-cover-above(var(--color-primary));
 
   display: flex;
   justify-content: space-around;

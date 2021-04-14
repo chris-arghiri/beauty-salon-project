@@ -9,8 +9,15 @@ interface ICredentialsProps {}
 const Credentials: FunctionComponent<ICredentialsProps> = () => {
   return (
     <div className={styles.Credentials} id='credentials'>
-      <SectionName name='Credentials' color='#fff' top='5vh' left='7vw' />
       <Swiper />
+      <SectionName
+        name='Credentials'
+        color='var(--color-white)'
+        bottom='0'
+        left='0'
+        right='0'
+        top=''
+      />
     </div>
   );
 };

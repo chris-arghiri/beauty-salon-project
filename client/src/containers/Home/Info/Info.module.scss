@@ -1,7 +1,9 @@
 @import '../../../sass/main';
 
 .Info {
-  @include set-section-cover-large(#1a1a1d);
+  position: relative;
+  top: -12vh;
+  min-height: 112vh;
   background: url('../../../assets/images/tiny_header_bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,7 +1,7 @@
 @import '../../../sass/main';
 
 .Videos {
-  @include set-section-cover-above(#6f2232);
+  @include set-section-cover-above(var(--color-secondary-purple));
 
   display: flex;
   justify-content: center;

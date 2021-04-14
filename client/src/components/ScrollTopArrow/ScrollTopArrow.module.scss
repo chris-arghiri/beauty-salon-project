@@ -1,5 +1,5 @@
 .ScrollTopArrow {
-  background: black;
+  background: var(--color-primary);
   position: fixed;
   bottom: 0;
   right: 5vw;
@@ -12,11 +12,11 @@
   transition: all 0.4s ease-in-out;
 
   &:hover {
-    background: #6f2232;
+    background: var(--color-secondary-blue);
   }
 
   & span {
-    color: #fff;
+    color: var(--color-white);
   }
 
   @keyframes fadeIn {

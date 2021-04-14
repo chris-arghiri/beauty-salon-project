@@ -12,6 +12,7 @@ const VideoCard: FunctionComponent<IVideoCardProps> = ({ url, autoplay }) => (
       <video
         src={url}
         autoPlay={autoplay}
+        controls
         muted
         onMouseOver={(event) => (event.target as HTMLMediaElement).play()}
         onMouseOut={(event) => (event.target as HTMLMediaElement).pause()}

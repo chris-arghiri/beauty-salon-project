@@ -1,25 +1,18 @@
 @import '../../../sass/main';
 
 .GallerySection {
-  @include set-section-cover-above(#1a1a1d);
+  @include set-section-cover-above(var(--color-primary));
 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: start;
 
-  &__cards {
-    margin-top: 2rem;
-    flex: 1;
-
-    display: flex;
-    justify-content: space-evenly;
-  }
-
   &__above {
     z-index: 2;
     position: relative;
-    background: #6f2232;
+
+    background: #002642;
 
     display: flex;
     justify-content: center;
@@ -28,6 +21,14 @@
     min-height: 90vh;
     min-width: 85vw;
 
-    box-shadow: 0 2rem 0 -1.3rem rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2rem 0 -1.3rem var(--beige);
+  }
+
+  &__cards {
+    margin-top: 4rem;
+    flex: 1;
+
+    display: flex;
+    justify-content: space-evenly;
   }
 }

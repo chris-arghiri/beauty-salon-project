@@ -8,20 +8,20 @@ const Footer: FunctionComponent<IFooterProps> = () => {
     <div className={styles.Footer}>
       <ul className={styles.Footer__social}>
         <li>
-          <a href='#'>First</a>
+          <a href='/instagram'>First</a>
         </li>
         <li>
-          <a href='#'>Second</a>
+          <a href='/facebook'>Second</a>
         </li>
         <li>
-          <a href='#'>Third</a>
+          <a href='/telegram?'>Third</a>
         </li>
         <li>
-          <a href='#'>Fourth</a>
+          <a href='/viber?'>Fourth</a>
         </li>
       </ul>
       <div className={styles.Footer__text}>
-        <h1> Some text should be here</h1>
+        <h1> Some text should be here with the gradient signature</h1>
       </div>
     </div>
   );

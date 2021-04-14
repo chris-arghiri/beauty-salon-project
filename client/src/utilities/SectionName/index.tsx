@@ -5,19 +5,29 @@ interface ISectionNameProps {
   name: string;
   color: string;
   top: string | number;
+  bottom: string | number;
   left: string | number;
+  right: string | number;
 }
 
 const SectionName: FunctionComponent<ISectionNameProps> = ({
   name,
   color,
   top,
-  left
+  left,
+  bottom,
+  right
 }) => {
   return (
     <p
       className={style.SectionName}
-      style={{ color: `${color}`, top: `${top}`, left: `${left}` }}>
+      style={{
+        color: `${color}`,
+        top: `${top}`,
+        left: `${left}`,
+        bottom: `${bottom}`,
+        right: `${right}`
+      }}>
       {name}
     </p>
   );

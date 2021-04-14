@@ -1,7 +1,7 @@
 @import '../../../sass/main';
 
 .Header {
-  @include set-section-cover(#1a1a1d);
+  @include set-section-cover(var(--color-primary));
 
   display: flex;
   justify-content: flex-start;

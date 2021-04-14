@@ -2,12 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-beige: #e5dada;
+  --color-primary: #02040f;
+  --color-secondary-blue: #002642;
+  --color-secondary-purple: #840032;
+  --color-secondary-orange: #e59500;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

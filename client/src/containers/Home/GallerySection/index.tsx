@@ -18,7 +18,14 @@ const GallerySection: FunctionComponent<IGallerySectionProps> = () => {
   return (
     <div className={styles.GallerySection} id='gallery'>
       <div className={styles.GallerySection__above}>
-        <SectionName color='#fff' name='Gallery' top='0' left='5vw' />
+        <SectionName
+          color='var(--color-white)'
+          name='Gallery'
+          top='0'
+          left='3vw'
+          bottom=''
+          right=''
+        />
         <InfoCard />
         <div className={styles.GallerySection__cards}>
           <SliderCard
